@@ -8,4 +8,3 @@ build/*.py
 dist/*.py
 __pycache__
 *.egg-info/*
-**/thrift/modeldb/*
