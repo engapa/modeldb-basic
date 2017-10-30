@@ -1,0 +1,354 @@
+{
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/__init__.py": [
+    1508846215.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/__main__.py": [
+    1509053230.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/basic/ModelDbSyncerBase.py": [
+    1509055327.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/basic/Structs.py": [
+    1508846215.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/basic/__init__.py": [
+    1509024095.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/events/Event.py": [
+    1509362153.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/events/ExperimentEvent.py": [
+    1509024095.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/events/ExperimentRunEvent.py": [
+    1509024095.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/events/FitEvent.py": [
+    1509024095.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/events/GridSearchCVEvent.py": [
+    1509024095.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/events/MetricEvent.py": [
+    1509024095.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/events/PipelineEvent.py": [
+    1509024095.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/events/ProjectEvent.py": [
+    1509024095.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/events/RandomSplitEvent.py": [
+    1509024095.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/events/TransformEvent.py": [
+    1509024095.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/events/__init__.py": [
+    1509024095.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/tests/__init__.py": [
+    1508846215.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/tests/integration/__init__.py": [
+    1509370908.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/tests/unit/ModelDbSyncerBaseTest.py": [
+    1509372810.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/tests/unit/__init__.py": [
+    1509370885.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/tests/unit/test_file_source.py": [
+    1509375112.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/tests/unit/test_fit_metric.py": [
+    1509372810.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/tests/unit/test_project.py": [
+    1509372810.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/tests/unit/utils.py": [
+    1508846215.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/thrift/__init__.py": [
+    1508846215.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/thrift/modeldb/ModelDBService.py": [
+    1509375130.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/thrift/modeldb/__init__.py": [
+    1509375130.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/thrift/modeldb/constants.py": [
+    1509375130.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/thrift/modeldb/ttypes.py": [
+    1509375130.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/utils/ConfigUtils.py": [
+    1509369506.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/utils/MetadataConstants.py": [
+    1508846215.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ],
+  "/Users/engapa/Projects/BBVA/EuroCloud/git/modeldb-basic/modeldb/utils/__init__.py": [
+    1508846215.0,
+    [
+      "E402",
+      "E241",
+      "E226",
+      "E222",
+      "E501",
+      "modelbd/thrift"
+    ]
+  ]
+}

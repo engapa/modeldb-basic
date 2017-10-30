@@ -1,0 +1,24 @@
+DATASETS:
+    - FILENAME: /path/to/train_filee.csv
+      METADATA:
+        num_cols: 2
+      TAG: trainn
+    - FILENAME: /path/to/test_filee.csv
+      METADATA:
+        num_cols: 2
+      TAG: testt
+
+MODEL:
+    # expected kv pairs
+    NAME: Sample Model22
+    TYPE: Normal distributionss
+    PATH: path/to/modell.R
+    TAG: trainn
+    CONFIG:
+        l1: 25
+    METRICS:
+        - TYPE: accuracy
+          VALUE: 0.95
+    # extra kv pairs
+    owner: bobb
+    date-created: 2017-11-24
