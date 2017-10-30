@@ -1,6 +1,9 @@
 =============
 modeldb-basic
 =============
+.. image:: https://img.shields.io/travis/engapa/modeldb-basic/master.svg
+   :target: http://travis-ci.org/engapa/modeldb-basic
+   :alt: Build Status
 
 A basic python client for working with `ModelDB machine learning management system <http://modeldb.csail.mit.edu>`_.
 
