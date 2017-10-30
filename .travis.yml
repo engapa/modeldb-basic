@@ -1,6 +1,12 @@
 language: python
+addons:
+  apt:
+    packages:
+    - gcc
+    - make
 python:
   - "2.7"
   - "3.6"
+install: make get-deps
 script:
 - make test
