@@ -1,0 +1,10 @@
+.*
+!.gitignore
+!.travis.yml
+
+*.py[cob]
+ModelDB.thrift
+build/*.py
+dist/*.py
+*.egg-info/*
+**/thrift/modeldb/*
