@@ -1,11 +1,8 @@
-language: python
+language: bash
 addons:
   apt:
     packages:
     - gcc
     - make
-python:
-  - "2.7"
-  - "3.6"
 script:
 - make test
