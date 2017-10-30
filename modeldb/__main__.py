@@ -7,8 +7,10 @@ import os
 def create_config():
     file_dir = os.path.dirname(__file__)
     filename = file_dir + '/syncer.json'
-    old_config = json.load(open(filename, 'r'))
-    new_config = json.load(open(filename, 'r'))
+    with open(filename, 'r') as old_f:
+        old_config = json.load(old_f)
+    with open(filename, 'r') as new_f:
+        new_config = json.load(new_f)
 
     print(
         'This utility helps you create a modeldb configuration file.\n'
@@ -90,9 +92,15 @@ def represents_int(s):
         return False
 
 
-if __name__ == '__main__':
-    if sys.argv[1] == 'create_config':
+def main(args=None):
+    if args is None:
+        args = sys.argv[1:]
+    if args == 'create_config':
         try:
             create_config()
         except KeyboardInterrupt:
             pass
+
+
+if __name__ == '__main__':
+    main()

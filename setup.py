@@ -31,7 +31,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'modeldb-config=modeldb:main',
+            'modeldb-config = modeldb.__main__:main'
         ],
-    },
+    }
 )
