@@ -1,4 +1,0 @@
-thrift
-pyyaml
-requests
-dpath
