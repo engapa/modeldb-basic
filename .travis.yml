@@ -1,6 +1,6 @@
 language: bash
-dist: trusty
-sudo: True
+dist: precise
+sudo: required
 addons:
   apt:
     packages:
@@ -9,10 +9,13 @@ addons:
     - libssl-dev
     - python-pip
     - python-dev
-python: '3.6'
 services:
 - docker
 install:
+- sudo apt-get update
+- sudo add-apt-repository ppa:jonathonf/python-3.6
+- sudo apt-get update
+- sudo apt-get install python3.6
 - sudo pip install tox
 script:
 - make test
