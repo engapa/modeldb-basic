@@ -1,6 +1,9 @@
-language: bash
+language: python
 dist: trusty
-sudo: required
+sudo: false
+python:
+  - 2.7
+  - 3.6
 addons:
   apt:
     packages:
@@ -10,20 +13,9 @@ addons:
     - python-pip
     - python-dev
     - build-essential
-    - checkinstall
-    - libreadline-gplv2-dev
-    - libncursesw5-dev
-    - libsqlite3-dev
-    - tk-dev
-    - libgdbm-dev
-    - libc6-dev
-    - libbz2-dev
 services:
 - docker
 install:
-- cd /usr/src
-- sudo wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tgz
-- sudo tar xzf Python-3.6.2.tgz && cd Python-3.6.2 && sudo ./configure && sudo make altinstall
-- sudo pip install tox
+- travis_retry pip install tox tox-travis
 script:
 - make test
