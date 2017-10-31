@@ -1,5 +1,6 @@
 language: bash
 dist: trusty
+sudo: True
 addons:
   apt:
     packages:
