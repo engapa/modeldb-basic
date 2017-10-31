@@ -31,11 +31,11 @@ Since this project is a develop fork of original project we encourage to use git
 
 Add this line in your requirement.txt file::
 
-    -e git+https://github.com/engapa/modeldb_basic#egg=modeldb-basic
+    -e git+https://github.com/engapa/modeldb-basic#egg=modeldb-basic
 
 
 Or install directly by ``pip``::
 
-    pip install -e git+https://github.com/engapa/modeldb_basic#egg=modeldb-basic
+    pip install -e git+https://github.com/engapa/modeldb-basic#egg=modeldb-basic
 
 
