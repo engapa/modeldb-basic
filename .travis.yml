@@ -1,4 +1,5 @@
 language: bash
+dist: trusty
 addons:
   apt:
     packages:
@@ -8,6 +9,6 @@ addons:
 services:
 - docker
 install:
-- pip install tox-travis
+- pip install tox
 script:
 - make test
