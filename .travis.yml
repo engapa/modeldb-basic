@@ -13,6 +13,6 @@ python: '3.6'
 services:
 - docker
 install:
-- pip install tox
+- sudo pip install tox
 script:
 - make test
