@@ -6,7 +6,10 @@ addons:
     packages:
     - gcc
     - make
+    - libssl-dev
     - python-pip
+    - python-dev
+python: '3.6'
 services:
 - docker
 install:
