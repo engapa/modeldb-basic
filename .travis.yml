@@ -39,22 +39,25 @@ script:
     git pull --tags;
     bumpversion --tag --commit --message '[skip ci] Travis Build $TRAVIS_BUILD_NUMBER --> {new_version}' patch modeldb/__init__.py;
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH;
+    export RELEASE_TAGGED=true
   fi
 
 deploy:
 - provider: pypi
-  user: ${PYPI_USERNAME}
-  password: ${PYPI_PASSWORD}
+  user: $PYPI_USERNAME
+  password: $PYPI_PASSWORD
   distributions: "sdist bdist_wheel"
   on:
-    tags: true
+    branch: master
+    condition: $RELEASE_TAGGED = true
 - provider: releases
   overwrite: true
   api_key: $GITHUB_TOKEN
   file_glob: true
   file: dist/*
   on:
-    tags: true
+    branch: master
+    condition: $RELEASE_TAGGED = true
 
 notifications:
   email:
