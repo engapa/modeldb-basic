@@ -21,6 +21,8 @@ services:
 - docker
 install:
 - travis_retry pip install tox tox-travis
+before_script:
+- make docker-pull
 script:
 - make test
 - if [[ "$TRAVIS_PULL_REQUEST" != "false" && "$TRAVIS_BRANCH" == "master" ]]; then

@@ -18,7 +18,10 @@ clean:
 	@find . -name '__pycache__' -exec rm -rf {} +
 	@find . -name '*~' -exec rm -f {} +
 
-gen:
+docker-pull:
+	@docker pull $(THRIFT_DOCKER_IMAGE)
+
+gen: docker-pull
 	@echo "Generating client code for python language by thrift ..."
 	@wget -q -O ModelDB.thrift https://raw.githubusercontent.com/mitdbg/modeldb/master/thrift/ModelDB.thrift
 	@docker run -v $(shell pwd):/data $(THRIFT_DOCKER_IMAGE) \
