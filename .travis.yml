@@ -37,7 +37,7 @@ script:
     git config --global user.email "builds@travis-ci.com";
     git config --global user.name "Travis CI";
     git pull --tags;
-    bumpversion --tag --commit --message '[skip ci] Travis Build $TRAVIS_BUILD_NUMBER --> {new_version}' patch modeldb/__init__.py;
+    bumpversion --tag --commit --message '[skip ci] Travis Build $TRAVIS_BUILD_NUMBER --> {new_version}' patch;
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH;
     export RELEASE_TAGGED="true";
   fi
