@@ -1,13 +1,20 @@
 language: python
 dist: trusty
 sudo: false
-python:
-- 2.7
-- 3.5
-- 3.6
-branches:
-  except:
-  - gh-pages
+matrix:
+  include:
+  - python: "3.7"
+    env:
+    - FLAG=false
+      TOXENV=py27
+  - python: "3.5"
+    env:
+    - FLAG=false
+      TOXENV=py35
+  - python: "3.6"
+    env:
+    - FLAG=true
+      TOXENV=py36
 addons:
   apt:
     packages:
@@ -20,12 +27,12 @@ addons:
 services:
 - docker
 install:
-- travis_retry pip install tox tox-travis
+- travis_retry pip install tox
 before_script:
 - make docker-pull
 script:
-- make test
-- if [[ "$TRAVIS_PULL_REQUEST" != "false" && "$TRAVIS_BRANCH" == "master" ]]; then
+- make test VENV=$TOXENV
+- if [[ "$TRAVIS_PULL_REQUEST" != "false" && "$TRAVIS_BRANCH" == "master" && "$FLAG" == "true" ]]; then
     pip install -U bumpversion;
     git config --global user.email "builds@travis-ci.com";
     git config --global user.name "Travis CI";
