@@ -23,7 +23,6 @@ install:
 - travis_retry pip install tox tox-travis
 script:
 - make test
-after_success:
 - if [[ "$TRAVIS_PULL_REQUEST" != "false" && "$TRAVIS_BRANCH" == "master" ]]; then
     pip install -U bumpversion;
     git config --global user.email "builds@travis-ci.com";
