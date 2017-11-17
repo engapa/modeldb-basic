@@ -9,7 +9,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='modeldb-basic',
-    version='0.0.1',
+    version=__import__('modeldb').VERSION,
     description='A system to manage machine learning models',
     long_description=long_description,
     url='https://github.com/engapa/modeldb-basic/tree/master',
@@ -21,6 +21,7 @@ setup(
         'Topic :: Scientific/Engineering',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6'
     ],
     keywords='Machine Learning ML model catalog',

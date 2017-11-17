@@ -13,7 +13,7 @@ This project goal is to try isolate a basic client to operate within model datab
 
 - Sync projects/models from file (json, yaml)
 - Sync projects/models by using basic mechanism (without sklearn dependencies)
-- Python 2.7 and 3.6 compatibility.
+- Python 2.7 and 3.{5,6} compatibility.
 
 
 Quick start

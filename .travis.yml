@@ -1,9 +1,9 @@
 language: python
 dist: trusty
 sudo: false
-python:
-  - 2.7
-  - 3.6
+branches:
+  except:
+  - gh-pages
 addons:
   apt:
     packages:
@@ -19,3 +19,35 @@ install:
 - travis_retry pip install tox tox-travis
 script:
 - make test
+after_success:
+- if [[ "$TRAVIS_PULL_REQUEST" != "false" && "$TRAVIS_BRANCH" == "master" ]]; then
+    pip install -U bumpversion;
+    git config --global user.email "builds@travis-ci.com";
+    git config --global user.name "Travis CI";
+    git config --global github.token "${GITHUB_TOKEN}"
+    git pull --tags;
+    bumpversion --tag --commit --message '[skip ci] Travis Build $TRAVIS_BUILD_NUMBER --> {new_version}' patch modeldb/__init__.py patch;
+    git push --tags origin $TRAVIS_BRANCH;
+  fi
+
+deploy:
+- provider: pypi
+  user: ${PYPI_USERNAME}
+  password: ${PYPI_PASSWORD}
+  distributions: "sdist bdist_wheel"
+  on:
+    tags: true
+- provider: releases
+  overwrite: true
+  api_key: $GITHUB_TOKEN
+  file_glob: true
+  file: dist/*
+  on:
+    tags: true
+
+notifications:
+  email:
+    recipients:
+      - engapa@gmail.com
+    on_success: never # default: change
+    on_failure: always # default: always
