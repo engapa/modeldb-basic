@@ -3,7 +3,7 @@ dist: trusty
 sudo: false
 matrix:
   include:
-  - python: "3.7"
+  - python: "2.7"
     env:
     - FLAG=false
       TOXENV=py27
