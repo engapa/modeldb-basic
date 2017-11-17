@@ -32,7 +32,7 @@ before_script:
 - make docker-pull
 script:
 - make test VENV=$TOXENV
-- if [[ "$TRAVIS_PULL_REQUEST" != "false" && "$TRAVIS_BRANCH" == "master" && "$FLAG" == "true" ]]; then
+- if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master" && "$FLAG" == "true" ]]; then
     pip install -U bumpversion;
     git config --global user.email "builds@travis-ci.com";
     git config --global user.name "Travis CI";
