@@ -5,8 +5,6 @@ SHELL := /bin/bash
 
 THRIFT_DOCKER_IMAGE = thrift:0.10
 
-VENV=""
-
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  clean         to clean all generated resources"
@@ -28,11 +26,12 @@ gen: docker-pull
 	@wget -q -O ModelDB.thrift https://raw.githubusercontent.com/mitdbg/modeldb/master/thrift/ModelDB.thrift
 	@docker run -v $(shell pwd):/data $(THRIFT_DOCKER_IMAGE) \
         thrift -r -v -out /data/modeldb/thrift --gen py /data/ModelDB.thrift
-ifneq ($(VENV),"")
-test: clean gen
-	tox -e $(VENV)
-else
-test: clean gen
-	tox
-endif
 
+test: clean gen
+	@tox
+
+build:
+	@tox -e build
+
+publish:
+	@tox -e publish
