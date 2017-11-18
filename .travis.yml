@@ -43,8 +43,8 @@ script:
     bumpversion --tag --commit --message '[skip ci] Travis Build {$TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}' patch modeldb/__init__.py;
     echo "Pushing commit and tags ...";
     export GIT_TAG=$(git describe --tags --abbrev=0 --exact-match `git rev-parse HEAD`);
-    git push https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH;
-    git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $GIT_TAG;
+    git push --follow-tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH;
+    git push https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $GIT_TAG;
     echo "Script finished successfully";
     export RELEASE_TAGGED="true";
   fi
@@ -54,6 +54,7 @@ deploy:
   user: $PYPI_USERNAME
   password: $PYPI_PASSWORD
   distributions: "sdist bdist_wheel"
+  skip_cleanup: true
   on:
     branch: master
     condition: $RELEASE_TAGGED = true
@@ -62,6 +63,7 @@ deploy:
   api_key: $GITHUB_TOKEN
   file_glob: true
   file: dist/*
+  skip_cleanup: true
   on:
     branch: master
     condition: $RELEASE_TAGGED = true
