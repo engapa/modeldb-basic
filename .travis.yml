@@ -35,30 +35,35 @@ before_script:
 - make docker-pull
 script:
 - TOXENV=$TOXENV make test
-- if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master" && "$FLAG" == "true" ]]; then
+- if [[ "$FLAG" == "true" ]]; then
     pip install -U bumpversion;
-    git version
-    git config --global user.email "builds@travis-ci.com";
-    git config --global user.name "Travis CI";
-    git fetch --tags;
-    bumpversion --tag --commit --message '[skip ci] Travis Build {$TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}' patch modeldb/__init__.py;
-    export GIT_TAG=$(git describe --tags --abbrev=0 --exact-match `git rev-parse HEAD`);
-    echo "Pushing commit and tags to branch ${TRAVIS_BRANCH} and tag ${GIT_TAG}...";
-    git push https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH;
-    git push https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $GIT_TAG;
-    echo "Script finished successfully";
-    export RELEASE_TAGGED="true";
+    if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master"]]; then
+      git version
+      git config --global user.email "builds@travis-ci.com";
+      git config --global user.name "Travis CI";
+      git fetch --tags;
+      bumpversion --tag --commit --message '[skip ci] Travis Build {$TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}' patch modeldb/__init__.py;
+      export GIT_TAG=$(git describe --tags --abbrev=0 --exact-match `git rev-parse HEAD`);
+      echo "Pushing commit and tags to branch ${TRAVIS_BRANCH} and tag ${GIT_TAG}...";
+      git push https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH;
+      git push https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $GIT_TAG;
+      echo "Script finished successfully";
+      export RELEASE_TAGGED="true";
+    else
+      bumpversion patch modeldb/__init__.py;
+    fi
   fi
 
 before_deploy:
-- make build
-- if [[ "$RELEASE_TAGGED" == "true" ]]; then
-    export TWINE_REPOSITORY_URL="https://upload.pypi.org/legacy/"
-    export PRERELEASE=false
-  else
-    export TWINE_REPOSITORY_URL="https://upload.testpypi.org/legacy/"
-    export PRERELEASE=true
-  fi
+- if [[ "$FLAG" == "true" ]]; then
+    make build;
+    if [[ "$RELEASE_TAGGED" == "true" ]]; then
+      export TWINE_REPOSITORY_URL="https://upload.pypi.org/legacy/";
+      export PRERELEASE=false;
+    else
+      export TWINE_REPOSITORY_URL="https://upload.testpypi.org/legacy/";
+      export PRERELEASE=true;
+    fi
 
 deploy:
 - provider: pypi
@@ -68,7 +73,7 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
-    condition: $RELEASE_TAGGED = true
+    condition: $FLAG = true or $RELEASE_TAGGED = true
 - provider: releases
   overwrite: true
   api_key: $GITHUB_TOKEN

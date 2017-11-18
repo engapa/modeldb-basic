@@ -4,7 +4,7 @@
 
 *.py[cob]
 ModelDB.thrift
-build/*.py
-dist/*.py
+build
+dist
 __pycache__
 *.egg-info/*
