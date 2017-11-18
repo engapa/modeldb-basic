@@ -1,9 +1,6 @@
 language: python
 dist: trusty
 sudo: false
-branches:
-  except:
-    - tags
 matrix:
   include:
   - python: "2.7"
@@ -31,9 +28,8 @@ services:
 - docker
 install:
 - travis_retry pip install tox
-before_script:
-- make docker-pull
 script:
+- if [ -n "$TRAVIS_TAG" ]; then exit 0; fi
 - TOXENV=$TOXENV make test
 - |
   if [[ "$FLAG" == "true" ]]; then
@@ -47,15 +43,9 @@ script:
       bumpversion --tag --commit \
         --message '[skip ci] Travis Build {$TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}'\
         patch modeldb/__init__.py
-      git status
-      git tag -l
       git checkout master
       git merge travis-master-$TRAVIS_BUILD_NUMBER
-      export GIT_TAG=$(git describe --tags --abbrev=0 --exact-match `git rev-parse HEAD`)
-      echo "Pushing commit and tags to branch ${TRAVIS_BRANCH} and tag ${GIT_TAG}..."
-      git push https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
-      git push https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $GIT_TAG
-      echo "Script finished successfully"
+      git push --follow-tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
       export RELEASE_TAGGED="true"
     else
       bumpversion patch modeldb/__init__.py;
@@ -66,13 +56,6 @@ before_deploy:
 - |
   if [[ "$FLAG" == "true" ]]; then
     make build
-    export TWINE_REPOSITORY_URL="https://upload.testpypi.org/legacy/"
-    export PRERELEASE=true
-  fi
-- |
-  if [[ "$RELEASE_TAGGED" == "true" ]]; then
-    export TWINE_REPOSITORY_URL="https://upload.pypi.org/legacy/"
-    export PRERELEASE=false
   fi
 
 deploy:
@@ -82,18 +65,17 @@ deploy:
   distributions: "sdist bdist_wheel"
   skip_cleanup: true
   on:
-    branch: master
-    condition: $FLAG = true or $RELEASE_TAGGED = true
+    tags: true
+    condition: "$TRAVIS_TAG =~ ^v.*$"
 - provider: releases
   overwrite: true
   api_key: $GITHUB_TOKEN
   file_glob: true
   file: dist/*
   skip_cleanup: true
-  prerelease: $PRERELEASE
   on:
-    branch: master
-    condition: $RELEASE_TAGGED = true
+    tags: true
+    condition: "$TRAVIS_TAG =~ ^v.*$"
 
 notifications:
   email:
