@@ -56,7 +56,7 @@ deploy:
   distributions: "sdist bdist_wheel"
   on:
     branch: master
-    condition: "RELEASE_TAGGED = true"
+    condition: RELEASE_TAGGED = true
 - provider: releases
   overwrite: true
   api_key: $GITHUB_TOKEN
@@ -64,7 +64,7 @@ deploy:
   file: dist/*
   on:
     branch: master
-    condition: "RELEASE_TAGGED = true"
+    condition: RELEASE_TAGGED = true
 
 notifications:
   email:
