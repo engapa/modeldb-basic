@@ -43,14 +43,14 @@ script:
       git config --global user.name "Travis CI"
       git branch -a
       git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH
-      git checkout master
       git pull -t
-      git merge travis-master-$TRAVIS_BUILD_NUMBER
       bumpversion --tag --commit \
         --message '[skip ci] Travis Build {$TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}'\
         patch modeldb/__init__.py
       git status
       git tag -l
+      git checkout master
+      git merge travis-master-$TRAVIS_BUILD_NUMBER
       export GIT_TAG=$(git describe --tags --abbrev=0 --exact-match `git rev-parse HEAD`)
       echo "Pushing commit and tags to branch ${TRAVIS_BRANCH} and tag ${GIT_TAG}..."
       git push https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
