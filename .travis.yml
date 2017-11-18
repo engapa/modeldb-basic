@@ -38,7 +38,7 @@ script:
 - if [[ "$FLAG" == "true" ]]; then
     pip install -U bumpversion;
     if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master"]]; then
-      git version
+      git version;
       git config --global user.email "builds@travis-ci.com";
       git config --global user.name "Travis CI";
       git fetch --tags;
