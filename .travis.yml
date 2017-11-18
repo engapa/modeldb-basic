@@ -45,6 +45,8 @@ script:
     git config --global user.name "Travis CI";
     git fetch --tags;
     bumpversion --tag --commit --message '[skip ci] Travis Build {$TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}' patch modeldb/__init__.py;
+    git status;
+    git tag -l;
     export GIT_TAG=$(git describe --tags --abbrev=0 --exact-match `git rev-parse HEAD`);
     echo "Pushing commit and tags to branch ${TRAVIS_BRANCH} and tag ${GIT_TAG}...";
     git push https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH;
@@ -56,12 +58,11 @@ script:
 before_deploy:
 - if [[ "$FLAG" == "true" ]]; then
     make build;
+    export TWINE_REPOSITORY_URL="https://upload.testpypi.org/legacy/";
+    export PRERELEASE=true;
 - if [[ "$RELEASE_TAGGED" == "true" ]]; then
     export TWINE_REPOSITORY_URL="https://upload.pypi.org/legacy/";
     export PRERELEASE=false;
-  else
-    export TWINE_REPOSITORY_URL="https://upload.testpypi.org/legacy/";
-    export PRERELEASE=true;
   fi
 
 deploy:
