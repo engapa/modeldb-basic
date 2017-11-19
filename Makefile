@@ -33,5 +33,5 @@ test: clean gen
 build:
 	@tox -e build
 
-publish:
-	@tox -e publish
+upload:
+	@tox -e upload
