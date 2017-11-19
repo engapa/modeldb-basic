@@ -13,6 +13,9 @@ Fix
 
 Other
 ~~~~~
+- [skip ci] Travis Build 103. Update version 0.0.22 --> 0.0.23. [Travis
+  CI]
+- Adding changelog file for version. [Travis CI]
 - [skip ci] Travis Build 103. Update version 0.0.21 --> 0.0.22. [Travis
   CI]
 - Adding changelog file for version. [Travis CI]
