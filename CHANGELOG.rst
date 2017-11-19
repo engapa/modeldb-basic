@@ -13,6 +13,9 @@ Fix
 
 Other
 ~~~~~
+- [skip ci] Travis Build 98. Update version 0.0.19 --> 0.0.20. [Travis
+  CI]
+- Adding changelog file for version. [Travis CI]
 - [skip ci] Travis Build 98. Update version 0.0.18 --> 0.0.19. [Travis
   CI]
 - Adding changelog file for version. [Travis CI]
