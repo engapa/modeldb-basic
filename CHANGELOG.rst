@@ -13,6 +13,9 @@ Fix
 
 Other
 ~~~~~
+- [skip ci] Travis Build 98. Update version 0.0.18 --> 0.0.19. [Travis
+  CI]
+- Adding changelog file for version. [Travis CI]
 - [skip ci] Travis Build 92. Update version 0.0.17 --> 0.0.18. [Travis
   CI]
 - Adding changelog file for version. [Travis CI]
@@ -85,11 +88,5 @@ Other
 - Fix errata. [Enrique Garcia]
 - Ignore build resources. [Enrique Garcia]
 - Adding other make commands. [Enrique Garcia]
-- Travis, skip_cleanup. [Enrique Garcia]
-- [skip ci] Update version 0.0.4 --> 0.0.5. [Enrique Garcia]
-- [skip ci] Update version 0.0.3 --> 0.0.4. [Enrique Garcia]
-- [skip ci] Update version 0.0.2 --> 0.0.3. [Enrique Garcia]
-- Proba. [Enrique Garcia]
-- [skip ci] Update version 0.0.1 --> 0.0.2. [Enrique Garcia]
 
 
