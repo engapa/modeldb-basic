@@ -13,6 +13,9 @@ Fix
 
 Other
 ~~~~~
+- [skip ci] Travis Build 88. Update version 0.0.12 --> 0.0.13. [Travis
+  CI]
+- Adding changelog file for version. [Travis CI]
 - [skip ci] Travis Build 87. Update version 0.0.11 --> 0.0.12. [Travis
   CI]
 - Merge pull request #3 from engapa/improve/readme. [Enrique Garcia
@@ -80,7 +83,5 @@ Other
 - Reset version 0.0.1 and discard travis build executions for tags.
   [Enrique Garcia]
 - Sync current version 0.0.5 for bumpversion. [Enrique Garcia]
-- Sync current version 0.0.4 for bumpversion. [Enrique Garcia]
-- Update bumpversion message. [Enrique Garcia]
 
 
