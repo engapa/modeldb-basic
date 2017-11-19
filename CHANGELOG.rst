@@ -13,6 +13,9 @@ Fix
 
 Other
 ~~~~~
+- [skip ci] Travis Build 115. Update version 0.0.1 --> 0.0.2. [Travis
+  CI]
+- Adding changelog file for version. [Travis CI]
 - Merge pull request #6 from engapa/improve/readme. [Enrique Garcia
   Pablos]
 
