@@ -13,6 +13,9 @@ Fix
 
 Other
 ~~~~~
+- [skip ci] Travis Build 103. Update version 0.0.23 --> 0.0.24. [Travis
+  CI]
+- Adding changelog file for version. [Travis CI]
 - [skip ci] Travis Build 103. Update version 0.0.22 --> 0.0.23. [Travis
   CI]
 - Adding changelog file for version. [Travis CI]
@@ -87,12 +90,6 @@ Other
 - Merge branch 'master' of https://github.com/engapa/modeldb_basic.
   [Enrique Garcia]
 - [skip ci] Travis Build 63. Update version 0.0.2 --> 0.0.3. [Travis CI]
-- [skip ci] Travis Build 62. Update version 0.0.1 --> 0.0.2. [Travis CI]
 - Travis, testing on tags conditions for deploy stages. [Enrique Garcia]
-- Sync current version for bumpversion. [Enrique Garcia]
-- Sync current version for bumpversion. [Enrique Garcia]
-- Travis, playing with git depth option. [Enrique Garcia]
-- Travis, remove semicolon character at the end of lines. [Enrique
-  Garcia]
 
 
