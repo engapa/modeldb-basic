@@ -1,9 +1,15 @@
 =============
 modeldb-basic
 =============
-.. image:: https://img.shields.io/travis/engapa/modeldb-basic/master.svg
+.. image:: https://img.shields.io/travis/engapa/modeldb-basic/master.svg?style=flat-square
    :target: http://travis-ci.org/engapa/modeldb-basic
    :alt: Build Status
+.. image:: https://img.shields.io/pypi/v/modeldb-basic.svg?style=flat-square
+   :target: https://pypi.org/project/modeldb-basic
+   :alt: Version
+.. image:: https://img.shields.io/pypi/pyversions/modeldb-basic.svg?style=flat-square
+   :target: https://pypi.org/project/modeldb-basic
+   :alt: Python versions
 
 A basic python client for working with `ModelDB machine learning management system <http://modeldb.csail.mit.edu>`_.
 
@@ -19,23 +25,27 @@ This project goal is to try isolate a basic client to operate within model datab
 Quick start
 ===========
 
-Develop
--------
-
-All phases of development are managed from a centric makefile. Please type ``make`` for more details.
-
 Install
 -------
 
-Since this project is a develop fork of original project we encourage to use git URL as source.
+In order to use the basic modeldb client in your python code (in notebooks as well) you should install
+the package by one of well known methods:
 
-Add this line in your requirement.txt file::
+- Installing directly by ``pip``::
 
-    -e git+https://github.com/engapa/modeldb-basic#egg=modeldb-basic
+    pip install <package_url>
 
+Where *package_url* would be one of:
 
-Or install directly by ``pip``::
+    * **modeldb-basic**, from pypi package repository (specify a version for no latest)
+    * **git+https://github.com/engapa/modeldb-basic#egg=modeldb-basic**, from remote sources of github (specify a branch or tag if you don't want to use master default branch)
+    * or a github released downloadable file url at https://github.com/engapa/modeldb-basic/releases
 
-    pip install -e git+https://github.com/engapa/modeldb-basic#egg=modeldb-basic
+- From sources previously downloaded in your host::
 
+    pip install .
+
+or::
+
+    python setup.py install
 
