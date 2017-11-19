@@ -33,10 +33,6 @@ install:
 - travis_retry pip install tox
 script:
 - make test
-- if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master"  && "$FLAG" == "true" ]]; then
-    export RELEASE_TAG="true";
-  fi
-before_deploy:
 - |
   if [[ "$FLAG" == "true" ]]; then
     make build
@@ -58,12 +54,14 @@ deploy:
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --follow-tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
   on:
-    condition: $RELEASE_TAG = true
+    branch: master
+    confition: $FLAG = true
 - provider: script
   skip_cleanup: true
   script: make build upload
   on:
-    condition: $RELEASE_TAG = true
+    branch: master
+    confition: $FLAG = true
 - provider: releases
   overwrite: true
   api_key: $GITHUB_TOKEN
@@ -71,7 +69,8 @@ deploy:
   file: dist/*
   skip_cleanup: true
   on:
-    condition: $RELEASE_TAG = true
+    branch: master
+    confition: $FLAG = true
 
 notifications:
   email:
