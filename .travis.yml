@@ -29,32 +29,27 @@ services:
 install:
 - travis_retry pip install tox
 script:
-- if [ -n "$TRAVIS_TAG" ]; then exit 0; fi
 - TOXENV=$TOXENV make test
 - |
-  if [[ "$FLAG" == "true" ]]; then
+  if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master" ]]; then
     pip install -U bumpversion
-    if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master" ]]; then
-      git config --global user.email "builds@travis-ci.com"
-      git config --global user.name "Travis CI"
-      git branch -a
-      git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH
-      git pull -t
-      bumpversion --tag --commit \
-        --message 'Travis Build {$TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}'\
-        patch modeldb/__init__.py
-      git checkout master
-      git merge travis-master-$TRAVIS_BUILD_NUMBER
-      git push --follow-tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
-      export RELEASE_TAGGED="true"
-    else
-      bumpversion patch modeldb/__init__.py;
-    fi
+    git config --global user.email "builds@travis-ci.com"
+    git config --global user.name "Travis CI"
+    git pull -t
+    git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH
+
+    bumpversion --tag --commit \
+      --message '[skip ci] Travis Build {$TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}'\
+      patch modeldb/__init__.py
+    git checkout master
+    git merge travis-master-$TRAVIS_BUILD_NUMBER
+    git push --follow-tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
+    export RELEASE_TAGGED="true"
   fi
 
 before_deploy:
 - |
-  if [[ "$FLAG" == "true" ]]; then
+  if [[ "$RELEASE_TAGGED" == "true" ]]; then
     make build
   fi
 
@@ -65,9 +60,7 @@ deploy:
   distributions: "sdist bdist_wheel"
   skip_cleanup: true
   on:
-    tags: true
-    python: 3.6
-    condition: "$TRAVIS_TAG =~ ^v.*$"
+    condition: $RELEASE_TAGGED = true
 - provider: releases
   overwrite: true
   api_key: $GITHUB_TOKEN
@@ -75,9 +68,7 @@ deploy:
   file: dist/*
   skip_cleanup: true
   on:
-    tags: true
-    python: 3.6
-    condition: "$TRAVIS_TAG =~ ^v.*$"
+    condition: $RELEASE_TAGGED = true
 
 notifications:
   email:
