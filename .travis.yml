@@ -33,13 +33,12 @@ install:
 - travis_retry pip install tox
 script:
 - make test
-- if [[ "$FLAG" == "true" ]]; then make build; fi
 - if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master"  && "$FLAG" == "true" ]]; then
     export RELEASE_TAG="true";
   fi
 before_deploy:
 - |
-  if [[ "$RELEASE_TAGGED" == "true" ]]; then
+  if [[ "$FLAG" == "true" ]]; then
     make build
   fi
 deploy:
