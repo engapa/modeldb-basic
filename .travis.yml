@@ -50,7 +50,7 @@ deploy:
     git config --global user.name "Travis CI" &&
     git pull -t &&
     git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH &&
-    bumpversion --tag --commit --message '[skip ci] Travis Build {$TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}' patch modeldb/__init__.py &&
+    bumpversion --tag --commit --message '[skip ci] Travis Build. Update version {current_version} --> {new_version}' patch modeldb/__init__.py &&
     git checkout master &&
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --follow-tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH ;
