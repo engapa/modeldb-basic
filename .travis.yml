@@ -31,12 +31,16 @@ services:
 - docker
 install:
 - travis_retry pip install tox
-- git fetch --unshallow --tags
 script:
 - make test
 - if [[ "$FLAG" == "true" ]]; then make build; fi
 - if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master"  && "$FLAG" == "true" ]]; then
     export RELEASE_TAG="true";
+  fi
+before_deploy:
+- |
+  if [[ "$RELEASE_TAGGED" == "true" ]]; then
+    make build
   fi
 deploy:
 - provider: script
@@ -45,8 +49,11 @@ deploy:
     pip install -U bumpversion &&
     git config --global user.email "builds@travis-ci.com" &&
     git config --global user.name "Travis CI" &&
-    git pull -t && git status && git branch -a &&
-    bumpversion --tag --commit --message '[skip ci] Travis Build {$TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}' patch &&
+    git pull -t &&
+    git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH &&
+    bumpversion --tag --commit --message '[skip ci] Travis Build {$TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}' patch patch modeldb/__init__.py &&
+    git checkout master &&
+    git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --follow-tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
   on:
     condition: $RELEASE_TAG = true
