@@ -31,17 +31,24 @@ Install
 In order to use the basic modeldb client in your python code (in notebooks as well) you should install
 the package by one of well known methods:
 
-- Installing directly by ``pip``::
+PIP
+"""
+::
 
     pip install <package_url>
 
+
 Where *package_url* would be one of:
 
-    * **modeldb-basic**, from pypi package repository (specify a version for no latest)
-    * **git+https://github.com/engapa/modeldb-basic#egg=modeldb-basic**, from remote sources of github (specify a branch or tag if you don't want to use master default branch)
-    * or a github released downloadable file url at https://github.com/engapa/modeldb-basic/releases
+* **modeldb-basic**, from pypi package repository (specify a version for no latest)
+* **git+https://github.com/engapa/modeldb-basic#egg=modeldb-basic**, from remote sources of github (specify a branch or tag if you don't want to use master default branch)
+* or a github released downloadable file url at https://github.com/engapa/modeldb-basic/releases
 
-- From sources previously downloaded in your host::
+
+From sources
+""""""""""""
+
+Previously downloaded in your host, somebody could install the package by typing::
 
     pip install .
 
