@@ -13,6 +13,9 @@ Fix
 
 Other
 ~~~~~
+- [skip ci] Travis Build 92. Update version 0.0.15 --> 0.0.16. [Travis
+  CI]
+- Adding changelog file for version. [Travis CI]
 - [skip ci] Travis Build 88. Update version 0.0.14 --> 0.0.15. [Travis
   CI]
 - Adding changelog file for version. [Travis CI]
@@ -82,12 +85,5 @@ Other
 - [skip ci] Update version 0.0.2 --> 0.0.3. [Enrique Garcia]
 - Proba. [Enrique Garcia]
 - [skip ci] Update version 0.0.1 --> 0.0.2. [Enrique Garcia]
-- Add condition for deployments. [Enrique Garcia]
-- Add condition for deployments. [Enrique Garcia]
-- Only build for master branch. [Enrique Garcia]
-- Deploy when any tag is created. [Enrique Garcia]
-- Reset version 0.0.1 and discard travis build executions for tags.
-  [Enrique Garcia]
-- Sync current version 0.0.5 for bumpversion. [Enrique Garcia]
 
 
