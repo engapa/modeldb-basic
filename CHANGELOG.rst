@@ -13,6 +13,9 @@ Fix
 
 Other
 ~~~~~
+- [skip ci] Travis Build 88. Update version 0.0.14 --> 0.0.15. [Travis
+  CI]
+- Adding changelog file for version. [Travis CI]
 - [skip ci] Travis Build 88. Update version 0.0.13 --> 0.0.14. [Travis
   CI]
 - Adding changelog file for version. [Travis CI]
