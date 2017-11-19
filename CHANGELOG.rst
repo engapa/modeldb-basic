@@ -13,6 +13,9 @@ Fix
 
 Other
 ~~~~~
+- [skip ci] Travis Build 103. Update version 0.0.21 --> 0.0.22. [Travis
+  CI]
+- Adding changelog file for version. [Travis CI]
 - [skip ci] Travis Build 98. Update version 0.0.20 --> 0.0.21. [Travis
   CI]
 - Adding changelog file for version. [Travis CI]
@@ -88,11 +91,5 @@ Other
 - Travis, playing with git depth option. [Enrique Garcia]
 - Travis, remove semicolon character at the end of lines. [Enrique
   Garcia]
-- Travis, show git info when build is in progress. [Enrique Garcia]
-- Travis, remove nested loops in build. [Enrique Garcia]
-- Travis, remove nested loops in build. [Enrique Garcia]
-- Fix errata. [Enrique Garcia]
-- Ignore build resources. [Enrique Garcia]
-- Adding other make commands. [Enrique Garcia]
 
 
