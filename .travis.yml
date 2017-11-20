@@ -3,7 +3,7 @@ dist: trusty
 sudo: false
 branches:
   except:
-    - /^v[0-9\.]*/
+    - /^v\d+\.*$/
     - /^untagged.*/
 matrix:
   include:
