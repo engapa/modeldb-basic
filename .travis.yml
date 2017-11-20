@@ -39,15 +39,15 @@ script:
     make build
   fi
 before_deploy:
-- >
+- |
   if [[ "$FLAG" == "true" ]]; then
-    pip install -U bumpversion gitchangelog &&
-    git config --global user.email "builds@travis-ci.com" &&
-    git config --global user.name "Travis CI" &&
-    git pull -t &&
-    git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH &&
+    pip install -U bumpversion gitchangelog
+    git config --global user.email "builds@travis-ci.com"
+    git config --global user.name "Travis CI"
+    git pull -t
+    git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH
     bumpversion --verbose --tag --commit --message "[skip ci] Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
-  ; fi
+  fi
 deploy:
 - provider: script
   skip_cleanup: true
