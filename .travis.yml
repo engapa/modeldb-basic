@@ -50,7 +50,7 @@ deploy:
     bumpversion --tag --commit --message "[skip ci] Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
   on:
     branch: master
-    confition: $FLAG = true
+    condition: $FLAG = true
 - provider: script
   skip_cleanup: true
   script: >-
@@ -60,7 +60,7 @@ deploy:
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
   on:
     branch: master
-    confition: $FLAG = true
+    condition: $FLAG = true
 - provider: releases
   overwrite: true
   api_key: $GITHUB_TOKEN
@@ -69,7 +69,7 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
-    confition: $FLAG = true
+    condition: $FLAG = true
 
 notifications:
   email:
