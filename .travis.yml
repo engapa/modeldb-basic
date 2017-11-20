@@ -38,29 +38,26 @@ script:
   if [[ "$FLAG" == "true" ]]; then
     make build
   fi
-before_deploy:
-- |
-  if [[ "$FLAG" == "true" ]]; then
-    pip install -U bumpversion gitchangelog
-    git config --global user.email "builds@travis-ci.com"
-    git config --global user.name "Travis CI"
-    git pull -t
-    git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH
-    bumpversion --verbose --tag --commit --message "[skip ci] Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
-  fi
 deploy:
 - provider: script
   skip_cleanup: true
   script: >-
-    git checkout master &&
-    git merge travis-master-$TRAVIS_BUILD_NUMBER &&
-    git push --follow-tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
+    pip install -U bumpversion &&
+    git config --global user.email "builds@travis-ci.com" &&
+    git config --global user.name "Travis CI" &&
+    git pull -t &&
+    git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH &&
+    bumpversion --tag --commit --message "[skip ci] Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
   on:
     branch: master
     confition: $FLAG = true
 - provider: script
   skip_cleanup: true
-  script: make build upload
+  script: >-
+    make clean build upload &&
+    git checkout master &&
+    git merge travis-master-$TRAVIS_BUILD_NUMBER &&
+    git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
   on:
     branch: master
     confition: $FLAG = true
