@@ -4,7 +4,7 @@ sudo: false
 branches:
   except:
     - /^v[0-9\.]*/
-    - /untagged*/
+    - /^untagged.*/
 matrix:
   include:
   - python: "2.7"
@@ -38,16 +38,20 @@ script:
   if [[ "$FLAG" == "true" ]]; then
     make build
   fi
-deploy:
-- provider: script
-  skip_cleanup: true
-  script: >-
+before_deploy:
+- >
+  if [[ "$FLAG" == "true" ]]; then
     pip install -U bumpversion gitchangelog &&
     git config --global user.email "builds@travis-ci.com" &&
     git config --global user.name "Travis CI" &&
     git pull -t &&
     git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH &&
-    bumpversion --tag --commit --message "[skip ci] Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py &&
+    bumpversion --verbose --tag --commit --message "[skip ci] Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
+  ; fi
+deploy:
+- provider: script
+  skip_cleanup: true
+  script: >-
     git checkout master &&
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --follow-tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
