@@ -40,8 +40,8 @@ PIP
 
 Where *package_url* would be one of:
 
-* **modeldb-basic**, from pypi package repository (specify a version for no latest)
-* **git+https://github.com/engapa/modeldb-basic#egg=modeldb-basic**, from remote sources of github (specify a branch or tag if you don't want to use master default branch)
+* ``modeldb-basic``, from pypi package repository (specify a version for no latest)
+* ``git+https://github.com/engapa/modeldb-basic#egg=modeldb-basic``, from remote sources of github (specify a branch or tag if you don't want to use master default branch)
 * or a github released downloadable file url at https://github.com/engapa/modeldb-basic/releases
 
 
