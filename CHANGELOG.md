@@ -122,10 +122,6 @@
 
 * [skip ci] Travis Build 98. Update version 0.0.18 --> 0.0.19. [Travis CI]
 
-* Adding changelog file for version. [Travis CI]
-
-* [skip ci] Travis Build 92. Update version 0.0.17 --> 0.0.18. [Travis CI]
-
 * Updating build phase on deploy step. [Enrique Garcia]
 
 * Add more info in the REAME fiel and improve travis file. [Enrique Garcia]
@@ -141,10 +137,6 @@
 * Avoid break line at deplot step in travis file. [Enrique Garcia]
 
 * Avoid break line at deplot step in travis file. [Enrique Garcia]
-
-* Travis add before_deploy step. [Enrique Garcia]
-
-* Travis add before_deploy step. [Enrique Garcia]
 
 * Travis add before_deploy step. [Enrique Garcia]
 
