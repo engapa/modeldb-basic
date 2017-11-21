@@ -59,7 +59,7 @@ deploy:
     pip install -U pystache gitchangelog &&
     gitchangelog > CHANGELOG.md &&
     git add CHANGELOG.md && git commit -m "@ci Generated CHANGELOG file" &&
-    git -f tag $TAG &&
+    git tag -f $TAG &&
     git checkout master &&
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH &&
