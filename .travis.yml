@@ -47,8 +47,7 @@ deploy:
     git config --global user.name "Travis CI" &&
     git pull -t &&
     git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH &&
-    bumpversion --tag --commit --message "[skip ci] @ci Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py &&
-    export TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
+    bumpversion --tag --commit --message "[skip ci] @ci Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
   on:
     branch: master
     condition: $FLAG = true
@@ -59,7 +58,8 @@ deploy:
     pip install -U pystache gitchangelog &&
     gitchangelog > CHANGELOG.md &&
     git add CHANGELOG.md && git commit -m "@ci Generated CHANGELOG file" &&
-    git tag -f $TAG &&
+    git describe --tags `git rev-list --tags --max-count=1`
+    git tag -f $(git describe --tags `git rev-list --tags --max-count=1`) &&
     git checkout master &&
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH &&
