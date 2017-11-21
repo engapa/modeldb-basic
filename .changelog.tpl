@@ -4,13 +4,13 @@
 
 {{/general_title}}
 {{#versions}}
-## {{{label}}}
+## [{{{label}}}](https://github.com/engapa/modeldb-basic/tree/{{{tag}}})
 
 {{#sections}}
 ### {{{label}}}
 
 {{#commits}}
-* {{{subject}}} [{{{author}}}]
+* [{{{commit.sha1_short}}}](https://github.com/engapa/modeldb-basic/commit/{{{commit.sha1}}}) {{{subject}}}
 {{#body}}
 
 {{{body_indented}}}

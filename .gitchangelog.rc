@@ -58,7 +58,7 @@
 ## will be ignored and won't be reported in the changelog.
 ##
 ignore_regexps = [
-    r'@ci\s+',
+    r'@skip\s+',
     r'@minor', r'!minor',
     r'@cosmetic', r'!cosmetic',
     r'@refactor', r'!refactor',

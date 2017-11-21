@@ -47,7 +47,7 @@ deploy:
     git config --global user.name "Travis CI" &&
     git pull -t &&
     git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH &&
-    bumpversion --tag --commit --message "[skip ci] @ci Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
+    bumpversion --tag --commit --message "[skip ci] @skip Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
   on:
     branch: master
     condition: $FLAG = true
@@ -57,14 +57,14 @@ deploy:
     make clean build upload &&
     pip install -U pystache gitchangelog &&
     gitchangelog > CHANGELOG.md &&
-    git add CHANGELOG.md && git commit -m "@ci Generated CHANGELOG file" &&
+    git add CHANGELOG.md && git commit -m "[skip ci] @skip Generated CHANGELOG file" &&
     git describe --tags `git rev-list --tags --max-count=1` &&
     git tag -f $(git describe --tags `git rev-list --tags --max-count=1`) &&
     git checkout master &&
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH &&
     sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc &&
-    export RELEASE_NOTES=$(gitchangelog)
+    gitchangelog > RELEASES_NOTES.md
   on:
     branch: master
     condition: $FLAG = true
@@ -74,7 +74,7 @@ deploy:
   file_glob: true
   file: dist/*
   skip_cleanup: true
-  body: $RELEASE_NOTES
+  body: cat RELEASE_NOTES.md
   on:
     branch: master
     condition: $FLAG = true
