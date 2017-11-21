@@ -1,32 +1,135 @@
-## [(unreleased)](https://github.com/engapa/modeldb-basic/tree/None)
+# Changelog
+
+
+## v0.1.7 (2017-11-21)
 
 ### Fix
 
-* [2c0fe2d](https://github.com/engapa/modeldb-basic/commit/2c0fe2d956091ab82757571b81453753d467ede9) Fix travis errata.
+* Fix travis errata. [Enrique Garcia]
 
-* [0e46b37](https://github.com/engapa/modeldb-basic/commit/0e46b37b7e51cdc44b7e26c6d5f594887fdd2a92) Fix travis errata.
+* Fix travis errata. [Enrique Garcia]
 
-* [fa2e85c](https://github.com/engapa/modeldb-basic/commit/fa2e85caf8aa61a42ae0dffa29607f5ad1789f52) Fix travis errata.
+* Fix travis errata. [Enrique Garcia]
 
-* [1a7f820](https://github.com/engapa/modeldb-basic/commit/1a7f82019b9f33800346d89e9dc9fd7f5ddf9595) Fix travis errata.
+* Fix travis errata. [Enrique Garcia]
 
 ### Other
 
-* [c75b3b8](https://github.com/engapa/modeldb-basic/commit/c75b3b88bd11a178c7f14e0b69c1335e0cc1706f) Trying generate a chengelog file, fix errata in travis file.
+* Trying generate a chengelog file, fix errata in travis file. [Enrique Garcia]
 
-* [7d360d0](https://github.com/engapa/modeldb-basic/commit/7d360d07450e74b67f46b4ad6379224b625b732c) Trying generate a chengelog file.
+* Trying generate a chengelog file. [Enrique Garcia]
 
-* [b1a12b9](https://github.com/engapa/modeldb-basic/commit/b1a12b9a59df9fece184bf78c03f8bc683030c62) Adding CHANGELOG file.
+* Adding CHANGELOG file. [Enrique Garcia]
 
 
-## [v0.1.6 (2017-11-20)](https://github.com/engapa/modeldb-basic/tree/v0.1.6)
+## v0.1.6 (2017-11-20)
 
 ### Fix
 
-* [bff01b0](https://github.com/engapa/modeldb-basic/commit/bff01b0fc9e0e72b7c91c51543d8499fe7a3483d) Fix #14.
+* Fix #14. [Enrique Garcia]
 
 ### Other
 
-* [d074612](https://github.com/engapa/modeldb-basic/commit/d074612515ccb923b1e76c198214478f1c0b2755) [skip ci] Travis Build 140. Update version 0.1.5 --> 0.1.6.
+* [skip ci] Travis Build 140. Update version 0.1.5 --> 0.1.6. [Travis CI]
+
+
+## v0.1.5 (2017-11-20)
+
+### Other
+
+* [skip ci] Travis Build 135. Update version 0.1.4 --> 0.1.5. [Travis CI]
+
+* Exclude some branches by name. [Enrique Garcia]
+
+
+## v0.1.4 (2017-11-20)
+
+### Fix
+
+* Fix #9. [Enrique Garcia]
+
+* Fix #5. [Enrique Garcia]
+
+* Fix #4. [Enrique Garcia]
+
+* Fixes #4. [Enrique Garcia]
+
+* Resolve installation of gitchangelog in deploy step. [Enrique Garcia]
+
+### Other
+
+* [skip ci] Travis Build 132. Update version 0.1.3 --> 0.1.4. [Travis CI]
+
+* Solve a travis errata with condition. [Enrique Garcia]
+
+* [skip ci] Travis Build 131. Update version 0.1.2 --> 0.1.3. [Travis CI]
+
+* [skip ci] Travis Build 131. Update version 0.1.1 --> 0.1.2. [Travis CI]
+
+* 2nd attempt to deploy 0.1.1 version. [Enrique Garcia]
+
+* [skip ci] Travis Build 130. Update version 0.0.21 --> 0.0.22. [Travis CI]
+
+* 2nd attempt to deploy 0.0.22 release. [Enrique Garcia]
+
+* Releasing version 0.0.21. [Enrique Garcia]
+
+* [skip ci] Travis Build 124. Update version 0.0.17 --> 0.0.18. [Travis CI]
+
+* [skip ci] Travis Build 124. Update version 0.0.16 --> 0.0.17. [Travis CI]
+
+* [skip ci] Travis Build 124. Update version 0.0.15 --> 0.0.16. [Travis CI]
+
+* [skip ci] Travis Build 121. Update version 0.0.3 --> 0.0.4. [Travis CI]
+
+* [skip ci] Travis Build 121. Update version 0.0.2 --> 0.0.3. [Travis CI]
+
+* [skip ci] Travis Build 121. Update version 0.0.1 --> 0.0.2. [Travis CI]
+
+* [skip ci] Travis Build 115. Update version 0.0.3 --> 0.0.4. [Travis CI]
+
+* Adding changelog file for version. [Travis CI]
+
+* [skip ci] Travis Build 115. Update version 0.0.2 --> 0.0.3. [Travis CI]
+
+* Adding changelog file for version. [Travis CI]
+
+* [skip ci] Travis Build 115. Update version 0.0.1 --> 0.0.2. [Travis CI]
+
+* Adding changelog file for version. [Travis CI]
+
+* Adding changelog file for version. [Travis CI]
+
+* [skip ci] Travis Build 103. Update version 0.0.23 --> 0.0.24. [Travis CI]
+
+* Adding changelog file for version. [Travis CI]
+
+* [skip ci] Travis Build 103. Update version 0.0.22 --> 0.0.23. [Travis CI]
+
+* Adding changelog file for version. [Travis CI]
+
+* [skip ci] Travis Build 103. Update version 0.0.21 --> 0.0.22. [Travis CI]
+
+* Adding changelog file for version. [Travis CI]
+
+* [skip ci] Travis Build 98. Update version 0.0.20 --> 0.0.21. [Travis CI]
+
+* Adding changelog file for version. [Travis CI]
+
+* [skip ci] Travis Build 98. Update version 0.0.19 --> 0.0.20. [Travis CI]
+
+* Updating build phase on deploy step. [Enrique Garcia]
+
+* Add more info in the REAME fiel and improve travis file. [Enrique Garcia]
+
+* [skip ci] Travis Build 79. Update version 0.0.10 --> 0.0.11. [Travis CI]
+
+* Avoid break line at deplot step in travis file. [Enrique Garcia]
+
+* [skip ci] Travis Build. Update version 0.0.9 --> 0.0.10. [Travis CI]
+
+* Avoid break line at deplot step in travis file. [Enrique Garcia]
+
+* Avoid break line at deplot step in travis file. [Enrique Garcia]
 
 
