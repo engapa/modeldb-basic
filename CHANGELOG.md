@@ -140,10 +140,6 @@
 
 * [skip ci] Travis Build 92. Update version 0.0.15 --> 0.0.16. [Travis CI]
 
-* Adding changelog file for version. [Travis CI]
-
-* [skip ci] Travis Build 88. Update version 0.0.14 --> 0.0.15. [Travis CI]
-
 * Updating build phase on deploy step. [Enrique Garcia]
 
 * Add more info in the REAME fiel and improve travis file. [Enrique Garcia]
@@ -167,9 +163,5 @@
 * Travis add before_deploy step. [Enrique Garcia]
 
 * Show git debug info into a deploy step. [Enrique Garcia]
-
-* Update travis and makefile files. [Enrique Garcia]
-
-* [skip ci] Travis Build 68. Update version 0.0.8 --> 0.0.9. [Travis CI]
 
 
