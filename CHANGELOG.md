@@ -56,8 +56,6 @@
 
 * Resolve installation of gitchangelog in deploy step. [Enrique Garcia]
 
-* Fix multiline script in deploy step. [Enrique Garcia]
-
 ### Other
 
 * [skip ci] Travis Build 132. Update version 0.1.3 --> 0.1.4. [Travis CI]
@@ -128,10 +126,6 @@
 
 * [skip ci] Travis Build 92. Update version 0.0.17 --> 0.0.18. [Travis CI]
 
-* Adding changelog file for version. [Travis CI]
-
-* [skip ci] Travis Build 92. Update version 0.0.16 --> 0.0.17. [Travis CI]
-
 * Updating build phase on deploy step. [Enrique Garcia]
 
 * Add more info in the REAME fiel and improve travis file. [Enrique Garcia]
@@ -153,7 +147,5 @@
 * Travis add before_deploy step. [Enrique Garcia]
 
 * Travis add before_deploy step. [Enrique Garcia]
-
-* Show git debug info into a deploy step. [Enrique Garcia]
 
 
