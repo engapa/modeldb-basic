@@ -21,38 +21,39 @@ This project goal is to try isolate a basic client to operate within model datab
 - Sync projects/models by using basic mechanism (without sklearn dependencies)
 - Python 2.7 and 3.{5,6} compatibility.
 
-
 Quick start
 ===========
 
 Install
 -------
 
-In order to use the basic modeldb client in your python code (in notebooks as well) you should install
-the package by one of well known methods:
+Remotely
+""""""""
 
-PIP
-"""
-::
+The most widely known way to install a python package is by **pip** command.
+The python package is available at [pypi repository](https://pypi.org/project/modeldb-basic/) (legacy repo [here](https://pypi.python.org/pypi/modeldb-basic)).
 
-    pip install <package_url>
+Just type this ``pip`` command to install it from pypi package repository::
 
-
-Where *package_url* would be one of:
-
-* ``modeldb-basic``, from pypi package repository (specify a version for no latest)
-* ``git+https://github.com/engapa/modeldb-basic#egg=modeldb-basic``, from remote sources of github (specify a branch or tag if you don't want to use master default branch)
-* or a github released downloadable file url at https://github.com/engapa/modeldb-basic/releases
+ pip install modeldb-basic
 
 
-From sources
-""""""""""""
+Alternatively it's possible to install it by using any of these URLs:
 
-Previously downloaded in your host, somebody could install the package by typing::
+* ``pip install git+https://github.com/engapa/modeldb-basic[@<git_ref>]#egg=modeldb-basic``
+* ``pip install <release_file>``
 
-    pip install .
+Where [@<git_ref>] is an optional reference to a git reference (i.e: @master, @v0.1.6) and
+<release_file> is the URL of one release file at https://github.com/engapa/modeldb-basic/releases
+
+Locally
+"""""""
+
+Previously downloaded in your host, somebody may install the package by typing::
+
+ pip install .
 
 or::
 
-    python setup.py install
+ python setup.py install
 

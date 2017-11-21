@@ -1,6 +1,9 @@
 .*
 !.gitignore
 !.travis.yml
+!.gitchangelog.rc
+!.changelog.tpl
+!.releasenotes.tpl
 
 *.py[cob]
 ModelDB.thrift
