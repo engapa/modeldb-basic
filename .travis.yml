@@ -56,7 +56,7 @@ deploy:
   skip_cleanup: true
   script: >-
     make clean build upload &&
-    pip install gitchangelog pystache &&
+    pip install -U pystache gitchangelog &&
     gitchangelog > CHANGELOG.md &&
     git add CHANGELOG.md && git commit -m "@ci Generated CHANGELOG file" &&
     git -f tag $TAG &&
@@ -64,7 +64,7 @@ deploy:
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
     sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc &&
-    export RELEASE_NOTES=$(gitchangelog) &&
+    export RELEASE_NOTES=$(gitchangelog)
   on:
     branch: master
     condition: $FLAG = true
