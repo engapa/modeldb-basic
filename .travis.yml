@@ -65,8 +65,8 @@ deploy:
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH &&
     sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc &&
-    gitchangelog > RELEASES_NOTES.md &&
-    export $RELEASE_NOTES = $(jshon -s "$(cat RELEASES_NOTES.md)")
+    gitchangelog > RELEASE_NOTES.md &&
+    export RELEASE_NOTES = $(jshon -s "$(cat RELEASE_NOTES.md)")
   on:
     branch: master
     condition: $FLAG = true
