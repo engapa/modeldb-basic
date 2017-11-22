@@ -91,7 +91,7 @@ section_regexps = [
         r'^([fF]eat(ure|ures)?)\s+\.*',
      ]),
     ('Fix', [
-        r'^([cC]lose(s|d)?|[fF]ix(es|ed)?|[rR]esolve(s|d)?)[\s:-_]\.*',
+        r'^([cC]lose(s|d)?|[fF]ix(es|ed)?|[sS]olve(s)?|[rR]esolve(s|d)?)[\s:-_]\.*',
      ]),
     ('Other', None ## Match all lines
      ),

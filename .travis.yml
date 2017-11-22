@@ -66,7 +66,7 @@ deploy:
     ls -lisah &&
     gitchangelog > RELEASE_NOTES.md &&
     ls -lisah &&
-    export RELEASE_NOTES = `python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))"`
+    export RELEASE_NOTES=$(python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))")
   on:
     branch: master
     condition: $FLAG = true
