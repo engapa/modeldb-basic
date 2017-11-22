@@ -28,6 +28,7 @@ addons:
     - python-pip
     - python-dev
     - build-essential
+    - jshon
 services:
 - docker
 install:
@@ -64,7 +65,8 @@ deploy:
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH &&
     sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc &&
-    gitchangelog > RELEASES_NOTES.md
+    gitchangelog > RELEASES_NOTES.md &&
+    export $RELEASE_NOTES = $(jshon -s "$(cat RELEASES_NOTES.md)"))
   on:
     branch: master
     condition: $FLAG = true
@@ -74,7 +76,7 @@ deploy:
   file_glob: true
   file: dist/*
   skip_cleanup: true
-  body: cat RELEASE_NOTES.md
+  body: ${RELEASE_NOTES}
   on:
     branch: master
     condition: $FLAG = true
