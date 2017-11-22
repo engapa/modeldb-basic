@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [v0.1.17 (2017-11-22)](https://github.com/engapa/modeldb-basic/tree/v0.1.17)
+
+### Other
+
+* [02ee010](https://github.com/engapa/modeldb-basic/commit/02ee0109611d0c11187c7f556a0a833f7bf201fc) Debugging Travis jobs.
+
+
 ## [v0.1.16 (2017-11-22)](https://github.com/engapa/modeldb-basic/tree/v0.1.16)
 
 ### Other
@@ -177,20 +184,8 @@
 
 * [b8f6869](https://github.com/engapa/modeldb-basic/commit/b8f6869f536ff37732e34d42d82006eaf450cb60) Adding changelog file for version.
 
-* [6838c88](https://github.com/engapa/modeldb-basic/commit/6838c888207ecd042ddeb76b12b4fe28ff890b2d) [skip ci] Travis Build 103. Update version 0.0.21 --> 0.0.22.
+* [18bab82](https://github.com/engapa/modeldb-basic/commit/18bab8297fcca430274750365bb12113fca3ff96) Merge pull request #2 from engapa/improve/readme.
 
-* [95efd65](https://github.com/engapa/modeldb-basic/commit/95efd65b752ba362edd6477c8cf7818e0cf40534) Adding changelog file for version.
-
-* [3b6de5b](https://github.com/engapa/modeldb-basic/commit/3b6de5b44e30be972fa26f29476f9350c0869c72) [skip ci] Travis Build 98. Update version 0.0.20 --> 0.0.21.
-
-* [176c628](https://github.com/engapa/modeldb-basic/commit/176c62852a0156912f9b73bf5569ec5dbbfba1c6) Updating build phase on deploy step.
-
-* [8d1f475](https://github.com/engapa/modeldb-basic/commit/8d1f47545b4c72e2f8cb3026ad6cb78b67d7baa6) Add more info in the REAME fiel and improve travis file.
-
-* [9e63599](https://github.com/engapa/modeldb-basic/commit/9e63599d2033a5e0d2dc44fe696500c1ab475abf) [skip ci] Travis Build 79. Update version 0.0.10 --> 0.0.11.
-
-* [c6c1272](https://github.com/engapa/modeldb-basic/commit/c6c12729ae61354ee7926235c0d7a57644250d66) Avoid break line at deplot step in travis file.
-
-* [adf2990](https://github.com/engapa/modeldb-basic/commit/adf2990d55cfc099bf782c142826f6eb1a7490ce) Merge branch 'master' of https://github.com/engapa/modeldb_basic.
+  Improve/readme
 
 
