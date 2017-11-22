@@ -28,7 +28,6 @@ addons:
     - python-pip
     - python-dev
     - build-essential
-    - jshon
 services:
 - docker
 install:
@@ -59,14 +58,13 @@ deploy:
     pip install -U pystache gitchangelog &&
     gitchangelog > CHANGELOG.md &&
     git add CHANGELOG.md && git commit -m "[skip ci] @skip Generated CHANGELOG file" &&
-    git describe --tags `git rev-list --tags --max-count=1` &&
     git tag -f $(git describe --tags `git rev-list --tags --max-count=1`) &&
     git checkout master &&
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH &&
     sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc &&
     gitchangelog > RELEASE_NOTES.md &&
-    export RELEASE_NOTES = $(jshon -s "$(cat RELEASE_NOTES.md)")
+    export RELEASE_NOTES = `python -c "import json,sys; print(json.dumps(open('RELEASE_NOTES.md').read()))"`
   on:
     branch: master
     condition: $FLAG = true

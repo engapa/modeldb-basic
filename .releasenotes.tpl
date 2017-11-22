@@ -4,7 +4,7 @@ Welcome to modeldb basci client. Take a look to complete changelog of this proje
 
 ## Usage
 
-Documentation is available [here](README.md).
+Documentation is available [here](README.rst).
 
 {{#versions}}
 ## [{{{label}}}](https://github.com/engapa/modeldb-basic/tree/{{{tag}}})
