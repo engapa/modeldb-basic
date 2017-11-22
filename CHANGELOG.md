@@ -1,14 +1,16 @@
 # Changelog
 
 
-## [v0.1.13 (2017-11-21)](https://github.com/engapa/modeldb-basic/tree/v0.1.13)
+## [v0.1.14 (2017-11-22)](https://github.com/engapa/modeldb-basic/tree/v0.1.14)
 
 ### Other
 
-* [d370ec9](https://github.com/engapa/modeldb-basic/commit/d370ec9942084e115416ac5c95f2ca71b4ec641c) Generate RELEASE NOTES.
+* [fc9ba0b](https://github.com/engapa/modeldb-basic/commit/fc9ba0b9bedf03cc44ce659ea0c5b29f7b877e19) Solve a extra ')' character in travis file.
+
+* [c37de9c](https://github.com/engapa/modeldb-basic/commit/c37de9ce826020e6d7435c9ec1dde2a51304f684) TRying to use jshon to generate the release body.
 
 
-## [v0.1.12 (2017-11-21)](https://github.com/engapa/modeldb-basic/tree/v0.1.12)
+## [v0.1.13 (2017-11-21)](https://github.com/engapa/modeldb-basic/tree/v0.1.13)
 
 ### Other
 
@@ -16,14 +18,11 @@
 
 * [e30688d](https://github.com/engapa/modeldb-basic/commit/e30688d976b32ebd40b4d83dc5e6ca74961e8128) [skip ci] @ci Travis Build 161. Update version 0.1.11 --> 0.1.12.
 
-
-## [v0.1.11 (2017-11-21)](https://github.com/engapa/modeldb-basic/tree/v0.1.11)
-
-### Other
-
 * [b8e1ecb](https://github.com/engapa/modeldb-basic/commit/b8e1ecbbac8930f17a140977d7738b93ec7a5a40) @ci Generated CHANGELOG file.
 
 * [3737f75](https://github.com/engapa/modeldb-basic/commit/3737f756ce1a1bd7b6165d7225313ad03c2844fb) [skip ci] @ci Travis Build 159. Update version 0.1.10 --> 0.1.11.
+
+* [d370ec9](https://github.com/engapa/modeldb-basic/commit/d370ec9942084e115416ac5c95f2ca71b4ec641c) Generate RELEASE NOTES.
 
 
 ## [v0.1.10 (2017-11-21)](https://github.com/engapa/modeldb-basic/tree/v0.1.10)
@@ -112,12 +111,6 @@
 
 * [662842b](https://github.com/engapa/modeldb-basic/commit/662842b3e93e6adec9f4dacafc33809586b1fb4e) Resolve installation of gitchangelog in deploy step.
 
-* [fdf1148](https://github.com/engapa/modeldb-basic/commit/fdf1148e00ba3e54dbddbce007f41a9cfd8bf525) Fix multiline script in deploy step.
-
-* [70e2ff9](https://github.com/engapa/modeldb-basic/commit/70e2ff9ebd8a6390a8d97c5a40c8c94a78a33277) Fix multiline script in deploy step.
-
-* [6a6b00d](https://github.com/engapa/modeldb-basic/commit/6a6b00d682d4ccc3b7a538d050fa42e9383c1b4d) Fix multiline script in deploy step.
-
 ### Other
 
 * [3458f15](https://github.com/engapa/modeldb-basic/commit/3458f15b00580de6c69d29bbcdff63212c21b289) [skip ci] Travis Build 132. Update version 0.1.3 --> 0.1.4.
@@ -188,14 +181,6 @@
 
 * [33fc93b](https://github.com/engapa/modeldb-basic/commit/33fc93b52816ba312959d3561a24521d229ec5ae) [skip ci] Travis Build 92. Update version 0.0.17 --> 0.0.18.
 
-* [de195ed](https://github.com/engapa/modeldb-basic/commit/de195ed20273ed08ff59c14f285b967ac08e1d72) Adding changelog file for version.
-
-* [dd176d5](https://github.com/engapa/modeldb-basic/commit/dd176d5eb7cce0a1280577ac51e8829a21f5035a) [skip ci] Travis Build 92. Update version 0.0.16 --> 0.0.17.
-
-* [2370ad6](https://github.com/engapa/modeldb-basic/commit/2370ad6635e5968222656832bebe75d78579211f) Adding changelog file for version.
-
-* [2e41989](https://github.com/engapa/modeldb-basic/commit/2e419896f3cbc6dc19716339042ae714bd642222) [skip ci] Travis Build 92. Update version 0.0.15 --> 0.0.16.
-
 * [176c628](https://github.com/engapa/modeldb-basic/commit/176c62852a0156912f9b73bf5569ec5dbbfba1c6) Updating build phase on deploy step.
 
 * [8d1f475](https://github.com/engapa/modeldb-basic/commit/8d1f47545b4c72e2f8cb3026ad6cb78b67d7baa6) Add more info in the REAME fiel and improve travis file.
@@ -217,7 +202,5 @@
 * [51ee2fd](https://github.com/engapa/modeldb-basic/commit/51ee2fdebb94422355c67cb36f9f54cfdbf80f7f) Travis add before_deploy step.
 
 * [31d874e](https://github.com/engapa/modeldb-basic/commit/31d874e1a1e72bf569cff459881e4ef26b11d2cc) Travis add before_deploy step.
-
-* [f243cb8](https://github.com/engapa/modeldb-basic/commit/f243cb8b1521c600762acb6c13bf82c2511e3930) Show git debug info into a deploy step.
 
 
