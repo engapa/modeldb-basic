@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [v0.1.15 (2017-11-22)](https://github.com/engapa/modeldb-basic/tree/v0.1.15)
+
+### Other
+
+* [30a5964](https://github.com/engapa/modeldb-basic/commit/30a59645d353b8989078fd4885911e9b4039fcd3) Solve invalid env variable name in travis file.
+
+
 ## [v0.1.14 (2017-11-22)](https://github.com/engapa/modeldb-basic/tree/v0.1.14)
 
 ### Other
@@ -175,12 +182,6 @@
 
 * [e8112e5](https://github.com/engapa/modeldb-basic/commit/e8112e5aab6791f7db5302ec17ef5c45bd78956e) Adding changelog file for version.
 
-* [8b09757](https://github.com/engapa/modeldb-basic/commit/8b09757bbd4418e17b8d646ceeb5eb3dbec7e17a) [skip ci] Travis Build 98. Update version 0.0.18 --> 0.0.19.
-
-* [eac9dad](https://github.com/engapa/modeldb-basic/commit/eac9dadfef21aee1b22aa3ecd9d5c4a1016362f2) Adding changelog file for version.
-
-* [33fc93b](https://github.com/engapa/modeldb-basic/commit/33fc93b52816ba312959d3561a24521d229ec5ae) [skip ci] Travis Build 92. Update version 0.0.17 --> 0.0.18.
-
 * [176c628](https://github.com/engapa/modeldb-basic/commit/176c62852a0156912f9b73bf5569ec5dbbfba1c6) Updating build phase on deploy step.
 
 * [8d1f475](https://github.com/engapa/modeldb-basic/commit/8d1f47545b4c72e2f8cb3026ad6cb78b67d7baa6) Add more info in the REAME fiel and improve travis file.
@@ -196,11 +197,5 @@
 * [ccf61ea](https://github.com/engapa/modeldb-basic/commit/ccf61ea1785dfc8dc55e748c2abdfdf82f0cdc1c) Avoid break line at deplot step in travis file.
 
 * [f91e5a1](https://github.com/engapa/modeldb-basic/commit/f91e5a1ebe91f941ae74b639a197c17aa7404c4e) Avoid break line at deplot step in travis file.
-
-* [a46cd4c](https://github.com/engapa/modeldb-basic/commit/a46cd4cea2d72b499bebe251a758ffc86e1e6708) Travis add before_deploy step.
-
-* [51ee2fd](https://github.com/engapa/modeldb-basic/commit/51ee2fdebb94422355c67cb36f9f54cfdbf80f7f) Travis add before_deploy step.
-
-* [31d874e](https://github.com/engapa/modeldb-basic/commit/31d874e1a1e72bf569cff459881e4ef26b11d2cc) Travis add before_deploy step.
 
 
