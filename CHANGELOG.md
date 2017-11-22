@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [v0.1.16 (2017-11-22)](https://github.com/engapa/modeldb-basic/tree/v0.1.16)
+
+### Other
+
+* [5a4903e](https://github.com/engapa/modeldb-basic/commit/5a4903e60145187034b276d2a967d52d49cdc709) Adjust release notes content.
+
+
 ## [v0.1.15 (2017-11-22)](https://github.com/engapa/modeldb-basic/tree/v0.1.15)
 
 ### Other
@@ -176,12 +183,6 @@
 
 * [3b6de5b](https://github.com/engapa/modeldb-basic/commit/3b6de5b44e30be972fa26f29476f9350c0869c72) [skip ci] Travis Build 98. Update version 0.0.20 --> 0.0.21.
 
-* [86a3f66](https://github.com/engapa/modeldb-basic/commit/86a3f669fafacef1484df908611605ffa579377a) Adding changelog file for version.
-
-* [210fc30](https://github.com/engapa/modeldb-basic/commit/210fc30ee49be67c61a09430c761aa1bfb73da66) [skip ci] Travis Build 98. Update version 0.0.19 --> 0.0.20.
-
-* [e8112e5](https://github.com/engapa/modeldb-basic/commit/e8112e5aab6791f7db5302ec17ef5c45bd78956e) Adding changelog file for version.
-
 * [176c628](https://github.com/engapa/modeldb-basic/commit/176c62852a0156912f9b73bf5569ec5dbbfba1c6) Updating build phase on deploy step.
 
 * [8d1f475](https://github.com/engapa/modeldb-basic/commit/8d1f47545b4c72e2f8cb3026ad6cb78b67d7baa6) Add more info in the REAME fiel and improve travis file.
@@ -190,12 +191,6 @@
 
 * [c6c1272](https://github.com/engapa/modeldb-basic/commit/c6c12729ae61354ee7926235c0d7a57644250d66) Avoid break line at deplot step in travis file.
 
-* [e97480b](https://github.com/engapa/modeldb-basic/commit/e97480b6be9a491a024a30457d92b9db87245ac9) [skip ci] Travis Build. Update version 0.0.9 --> 0.0.10.
-
-* [e4bd15b](https://github.com/engapa/modeldb-basic/commit/e4bd15b128b697c4de5bc4155a3551b1c4ef1be9) Avoid break line at deplot step in travis file.
-
-* [ccf61ea](https://github.com/engapa/modeldb-basic/commit/ccf61ea1785dfc8dc55e748c2abdfdf82f0cdc1c) Avoid break line at deplot step in travis file.
-
-* [f91e5a1](https://github.com/engapa/modeldb-basic/commit/f91e5a1ebe91f941ae74b639a197c17aa7404c4e) Avoid break line at deplot step in travis file.
+* [adf2990](https://github.com/engapa/modeldb-basic/commit/adf2990d55cfc099bf782c142826f6eb1a7490ce) Merge branch 'master' of https://github.com/engapa/modeldb_basic.
 
 
