@@ -60,7 +60,7 @@ deploy:
     gitchangelog > CHANGELOG.md &&
     git add CHANGELOG.md && git commit -m "[skip ci] Generated CHANGELOG file" &&
     git describe --tags `git rev-list --tags --max-count=1` &&
-    TAG_VERSION=$$(git describe --tags `git rev-list --tags --max-count=1`) &&
+    TAG_VERSION="$(git describe --tags `git rev-list --tags --max-count=1`)" &&
     env;
     echo "Probando .... $TAG_VERSION" &&
     git tag -f $TAG_VERSION &&
