@@ -122,22 +122,11 @@ Documentation is available [here](README.rst).
 
 * [8d9fa69](https://github.com/engapa/modeldb-basic/commit/8d9fa694ab23751a30837f12c1e8ae33e5e7ea5c) 2nd attempt to deploy 0.1.1 version.
 
-* [34dfb85](https://github.com/engapa/modeldb-basic/commit/34dfb855f21575b5f478b1bbb29a18c5612447ab) Merge pull request #12 from engapa/improve/readme.
-
-  2nd attempt to deploy 0.0.22 release
-
 
 ## [v0.1.5 (2017-11-20)](https://github.com/engapa/modeldb-basic/tree/v0.1.5)
 
 ### Added
 
 * [e2f4421](https://github.com/engapa/modeldb-basic/commit/e2f44216aa322f4ffc117075090be85862c4c52b) Exclude some branches by name.
-
-
-## [v0.1.4 (2017-11-20)](https://github.com/engapa/modeldb-basic/tree/v0.1.4)
-
-### Fix
-
-* [a52a3cb](https://github.com/engapa/modeldb-basic/commit/a52a3cb25580408bdfc274eaabf9fa7f6f4bdb3d) Solve a travis errata with condition.
 
 
