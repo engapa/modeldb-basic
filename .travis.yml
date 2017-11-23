@@ -65,8 +65,10 @@ deploy:
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH &&
     sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc &&
-    gitchangelog $TAG_VERSION..HEAD > RELEASE_NOTES.md &&
-    export RELEASE_NOTES=$(python -c "import json;print(json.dumps(open('RELEASE_NOTES.md').read()))")
+    gitchangelog $TAG_VERSION..HEAD > RELEASE_NOTES.md && cat RELEASE_NOTES.md &&
+    export RELEASE_NOTES=$(
+        python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))"
+    )
   on:
     branch: master
     condition: $FLAG = true
