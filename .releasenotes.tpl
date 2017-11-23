@@ -1,6 +1,6 @@
 # Release notes
 
-Welcome to modeldb basci client. Take a look to complete changelog of this project [here](CHANGELOG.md)
+Welcome to modeldb basci client. Take a look to complete changelog [here](CHANGELOG.md)
 
 ## Usage
 

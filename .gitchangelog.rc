@@ -58,14 +58,12 @@
 ## will be ignored and won't be reported in the changelog.
 ##
 ignore_regexps = [
-    r'@skip\s+',
+    r'(\[skip ci\]|\[ci skip\]|@skip)',
     r'@minor', r'!minor',
     r'@cosmetic', r'!cosmetic',
     r'@refactor', r'!refactor',
     r'@wip', r'!wip',
-    r'^([cC]hg|[fF]ix|[nN]ew)\s*:\s*[p|P]kg:',
-    r'^([cC]hg|[fF]ix|[nN]ew)\s*:\s*[d|D]ev:',
-    r'^(.{3,3}\s*:)?\s*[fF]irst commit.?\s*$',
+    r'^[fF]irst commit\.?\s*$',
     r'^$',  ## ignore commits with empty messages
 ]
 
@@ -93,7 +91,7 @@ section_regexps = [
     ('Fix', [
         r'^([cC]lose(s|d)?|[fF]ix(es|ed)?|[sS]olve(s)?|[rR]esolve(s|d)?)[\s:-_]\.*',
      ]),
-    ('Other', None ## Match all lines
+    ('Added', None ## Match all lines
      ),
 
 ]
@@ -192,7 +190,7 @@ unreleased_version_label = "(unreleased)"
 #output_engine = rest_py
 #output_engine = mustache("restructuredtext")
 #output_engine = mustache("markdown")
-output_engine = mustache(".changelog.tpl")
+output_engine = mustache(".releasenotes.tpl")
 #output_engine = makotemplate("restructuredtext")
 
 

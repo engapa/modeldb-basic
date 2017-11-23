@@ -4,6 +4,7 @@ sudo: false
 branches:
   except:
     - /^v\d+\.*$/
+    - /^tavis-.*$/
     - /^untagged.*/
 matrix:
   include:
@@ -47,7 +48,7 @@ deploy:
     git config --global user.name "Travis CI" &&
     git pull -t &&
     git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH &&
-    bumpversion --tag --commit --message "[skip ci] @skip Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
+    bumpversion --tag --commit --message "[skip ci] Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
   on:
     branch: master
     condition: $FLAG = true
@@ -57,14 +58,14 @@ deploy:
     make clean build upload &&
     pip install -U pystache gitchangelog &&
     gitchangelog > CHANGELOG.md &&
-    git add CHANGELOG.md && git commit -m "[skip ci] @skip Generated CHANGELOG file" &&
-    git tag -f $(git describe --tags `git rev-list --tags --max-count=1`) &&
+    git add CHANGELOG.md && git commit -m "[skip ci] Generated CHANGELOG file" &&
+    export TAG_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`) &&
+    git tag -f $TAG_VERSION &&
     git checkout master &&
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH &&
     sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc &&
-    gitchangelog > RELEASE_NOTES.md &&
-    python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))" &&
+    gitchangelog $TAG_VERSION..HEAD > RELEASE_NOTES.md &&
     export RELEASE_NOTES=$(python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))")
   on:
     branch: master
