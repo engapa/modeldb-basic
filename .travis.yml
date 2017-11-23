@@ -59,9 +59,7 @@ deploy:
     pip install -U pystache gitchangelog &&
     gitchangelog > CHANGELOG.md &&
     git add CHANGELOG.md && git commit -m "[skip ci] Generated CHANGELOG file" &&
-    git describe --tags $(git rev-list --tags --max-count=1);
-    TAG_VERSION="kakas";
-    echo "Probando .... $TAG_VERSION" &&
+    export TAG_VERSION\=$(git describe --tags `git rev-list --tags --max-count=1`) &&
     git tag -f $TAG_VERSION &&
     git checkout master &&
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
