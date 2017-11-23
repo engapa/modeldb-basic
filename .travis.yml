@@ -37,16 +37,16 @@ script:
 - make test
 - |
   if [[ "$FLAG" == "true" ]]; then
-    pip install -U bumpversion gitchangelog pystache &&
+    pip install -U bumpversion gitchangelog pystache
     git config --global user.email "builds@travis-ci.com"
     git config --global user.name "Travis CI"
     git pull -t
     git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH
-    bumpversion --tag --commit --message "[skip ci] Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py &&
+    bumpversion --tag --commit --message "[skip ci] Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
     export TAG_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`)
     gitchangelog > CHANGELOG.md
     git add CHANGELOG.md && git commit -m "[skip ci] Generated CHANGELOG file"
-    sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc &&
+    sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc
     export RELEASE_NOTES=$(gitchangelog $TAG_VERSION..HEAD)
   fi
 deploy:
@@ -58,7 +58,7 @@ deploy:
     git tag -f $TAG_VERSION &&
     git checkout master &&
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
-    git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH &&
+    git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
   on:
     branch: master
     condition: $FLAG = true
