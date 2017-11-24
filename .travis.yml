@@ -72,7 +72,7 @@ deploy:
   file_glob: true
   file: dist/*
   skip_cleanup: true
-  body: ${RELEASE_NOTES}
+  body: "${RELEASE_NOTES}"
   on:
     branch: master
     condition: $FLAG = true
