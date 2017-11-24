@@ -8,14 +8,14 @@ branches:
     - /^untagged.*/
 matrix:
   include:
-  - python: "2.7"
-    env:
-    - FLAG=false
-      TOXENV=py27
-  - python: "3.5"
-    env:
-    - FLAG=false
-      TOXENV=py35
+#  - python: "2.7"
+#    env:
+#    - FLAG=false
+#      TOXENV=py27
+#  - python: "3.5"
+#    env:
+#    - FLAG=false
+#      TOXENV=py35
   - python: "3.6"
     env:
     - FLAG=true
@@ -58,7 +58,7 @@ script:
   fi
 after_success:
 - if [[ "$FLAG" == "true" ]]; then
-    bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN;
+    bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -f .coverage;
   fi
 deploy:
 # Publish artifacts to python repositories and create remote tag
