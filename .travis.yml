@@ -53,7 +53,7 @@ script:
       git add CHANGELOG.md && git commit -m "[skip ci] Generated CHANGELOG file" CHANGELOG.md
       git tag -f $TAG_VERSION
       sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc
-      (gitchangelog $TAG_VERSION..HEAD > RELEASE_NOTES.md) &
+      (gitchangelog $TAG_VERSION_OLD..HEAD > RELEASE_NOTES.md) &
       wait %1
       cat RELEASE_NOTES.md
       python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))"
