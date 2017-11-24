@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [v0.1.25 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.25)
+
+### Fix
+
+* [539dbc8](https://github.com/engapa/modeldb-basic/commit/539dbc87ff18a7880f5e35bf7b69729d4a0225af) Fix typo in template of releasenotes.
+
+
 ## [v0.1.24 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.24)
 
 ### Added
@@ -27,7 +34,5 @@
 * [656c22c](https://github.com/engapa/modeldb-basic/commit/656c22c7309efdff5da8dd2bbf5cea858e5cd027) Add a fix pattern for a section in changelog file.
 
 * [02ee010](https://github.com/engapa/modeldb-basic/commit/02ee0109611d0c11187c7f556a0a833f7bf201fc) Debugging Travis jobs.
-
-* [5a4903e](https://github.com/engapa/modeldb-basic/commit/5a4903e60145187034b276d2a967d52d49cdc709) Adjust release notes content.
 
 
