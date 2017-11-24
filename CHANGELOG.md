@@ -50,16 +50,6 @@ Documentation is available [here](README.rst).
 
 * [3fb2064](https://github.com/engapa/modeldb-basic/commit/3fb2064881bdb535f0e49679851f742dff07e6f8) @ci Generated CHANGELOG file.
 
-* [a4e507c](https://github.com/engapa/modeldb-basic/commit/a4e507c558f893fff3b4c42ed61b0025012a113c) @ci Generated CHANGELOG file.
-
 * [d370ec9](https://github.com/engapa/modeldb-basic/commit/d370ec9942084e115416ac5c95f2ca71b4ec641c) Generate RELEASE NOTES.
-
-* [c75b3b8](https://github.com/engapa/modeldb-basic/commit/c75b3b88bd11a178c7f14e0b69c1335e0cc1706f) Trying generate a chengelog file, fix errata in travis file.
-
-* [7d360d0](https://github.com/engapa/modeldb-basic/commit/7d360d07450e74b67f46b4ad6379224b625b732c) Trying generate a chengelog file.
-
-* [cd17f5c](https://github.com/engapa/modeldb-basic/commit/cd17f5cbfb637619f9733692dfb8ccd36b50e8e7) Merge pull request #16 from engapa/improve/readme.
-
-  Adding CHANGELOG file
 
 
