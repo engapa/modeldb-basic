@@ -38,7 +38,7 @@ script:
 - |
   if [[ "$FLAG" == "true" ]]; then
     set -e
-    make build clean
+    make build
     if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master" ]]; then
       pip install -U bumpversion gitchangelog pystache
       git config --global user.email "builds@travis-ci.com"
@@ -53,7 +53,7 @@ script:
       git tag -f $TAG_VERSION
       sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc
       export ENV_RELEASE_NOTES=`gitchangelog $TAG_VERSION_OLD..HEAD`
-      export RELEASE_NOTES=$(python -c "import json,os; print(json.dumps(os.environ['ENV_RELEASE_NOTES']))")
+      export RELEASE_NOTES=$(python -c "import json,os; print(json.dumps(os.environ['ENV_RELEASE_NOTES']).strip('"'))")
     fi
   fi
 after_success:
