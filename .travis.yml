@@ -52,6 +52,7 @@ script:
       git tag -f $TAG_VERSION
       sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc
       gitchangelog $TAG_VERSION..HEAD > RELEASE_NOTES.md
+      python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))"
       export RELEASE_NOTES=$(python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))")
       echo $RELEASE_NOTES
     fi
@@ -76,7 +77,7 @@ deploy:
   file_glob: true
   file: dist/*
   skip_cleanup: true
-  body: ${RELEASE_NOTES}
+  body: "${RELEASE_NOTES}"
   on:
     branch: master
     condition: $FLAG = true
