@@ -56,6 +56,10 @@ script:
       export RELEASE_NOTES=$(python -c "import json,os; print(json.dumps(os.environ['ENV_RELEASE_NOTES']))")
     fi
   fi
+after_script:
+- if [[ "$FLAG" == "true" ]]; then
+    bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN;
+  fi
 deploy:
 # Publish artifacts to python repositories and create remote tag
 - provider: script
@@ -75,7 +79,7 @@ deploy:
   file_glob: true
   file: dist/*
   skip_cleanup: true
-  body: "${RELEASE_NOTES}"
+  body: ${RELEASE_NOTES}
   on:
     branch: master
     condition: $FLAG = true
