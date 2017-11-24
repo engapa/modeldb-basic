@@ -1,30 +1,17 @@
 # Changelog
 
 
-## [v0.1.26 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.26)
-
-### Added
-
-* [158b017](https://github.com/engapa/modeldb-basic/commit/158b017cf60dfc448bee1765c47634bf80b4a7b3) Last attemp using release deploy stage of travis.
-
-
-## [v0.1.25 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.25)
+## [v0.1.27 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.27)
 
 ### Fix
 
 * [539dbc8](https://github.com/engapa/modeldb-basic/commit/539dbc87ff18a7880f5e35bf7b69729d4a0225af) Fix typo in template of releasenotes.
 
-
-## [v0.1.24 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.24)
-
 ### Added
+
+* [158b017](https://github.com/engapa/modeldb-basic/commit/158b017cf60dfc448bee1765c47634bf80b4a7b3) Last attemp using release deploy stage of travis.
 
 * [09d4798](https://github.com/engapa/modeldb-basic/commit/09d4798c635b98a232388a0df7755e66ff37204e) Testing release by using travis, wait write file operation.
-
-
-## [v0.1.23 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.23)
-
-### Added
 
 * [c0a914f](https://github.com/engapa/modeldb-basic/commit/c0a914ff7ddc0461fe2244a9fcb1c2cd8c53b13a) Export multiple needed env vars from script stage of travis.
 
