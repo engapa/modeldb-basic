@@ -52,8 +52,8 @@ script:
       git add CHANGELOG.md && git commit -m "[skip ci] Generated CHANGELOG file" CHANGELOG.md
       git tag -f $TAG_VERSION
       sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc
-      export ENV_REALEASE_NOTE=`gitchangelog $TAG_VERSION_OLD..HEAD`
-      export RELEASE_NOTES=$(python -c "import json,os; print(json.dumps(os.environ['ENV_REALEASE_NOTE']))")
+      export ENV_RELEASE_NOTES=`gitchangelog $TAG_VERSION_OLD..HEAD`
+      export RELEASE_NOTES=$(python -c "import json,os; print(json.dumps(os.environ['ENV_RELEASE_NOTES']))")
       echo $RELEASE_NOTES
     fi
   fi
@@ -76,7 +76,7 @@ deploy:
   file_glob: true
   file: dist/*
   skip_cleanup: true
-  body: "${RELEASE_NOTES}"
+  body: "${ENV_RELEASE_NOTES}"
   on:
     branch: master
     condition: $FLAG = true
