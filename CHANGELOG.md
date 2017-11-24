@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [v0.1.26 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.26)
+
+### Added
+
+* [158b017](https://github.com/engapa/modeldb-basic/commit/158b017cf60dfc448bee1765c47634bf80b4a7b3) Last attemp using release deploy stage of travis.
+
+
 ## [v0.1.25 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.25)
 
 ### Fix
@@ -32,7 +39,5 @@
 * [f1ad53f](https://github.com/engapa/modeldb-basic/commit/f1ad53f96d799a5cb4aaf6457ffd009f9b299d71) Debugging Travis jobs.
 
 * [656c22c](https://github.com/engapa/modeldb-basic/commit/656c22c7309efdff5da8dd2bbf5cea858e5cd027) Add a fix pattern for a section in changelog file.
-
-* [02ee010](https://github.com/engapa/modeldb-basic/commit/02ee0109611d0c11187c7f556a0a833f7bf201fc) Debugging Travis jobs.
 
 
