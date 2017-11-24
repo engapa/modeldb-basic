@@ -48,16 +48,12 @@ script:
       git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH
       bumpversion --tag --commit --message "[skip ci] Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
       export TAG_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`)
-      (gitchangelog > CHANGELOG.md) &
-      wait %1
+      gitchangelog > CHANGELOG.md
       git add CHANGELOG.md && git commit -m "[skip ci] Generated CHANGELOG file" CHANGELOG.md
       git tag -f $TAG_VERSION
       sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc
-      (gitchangelog $TAG_VERSION_OLD..HEAD > RELEASE_NOTES.md) &
-      wait %1
-      cat RELEASE_NOTES.md
-      python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))"
-      export RELEASE_NOTES=$(python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))")
+      export ENV_REALEASE_NOTE=`gitchangelog $TAG_VERSION_OLD..HEAD`
+      export RELEASE_NOTES=$(python -c "import json,os; print(json.dumps(os.environ['ENV_REALEASE_NOTE']))")
       echo $RELEASE_NOTES
     fi
   fi
@@ -70,7 +66,6 @@ deploy:
     git checkout master &&
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
     git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
-    echo $RELEASE_NOTES
   on:
     branch: master
     condition: $FLAG = true
