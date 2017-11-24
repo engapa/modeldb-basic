@@ -50,7 +50,7 @@ script:
       git add CHANGELOG.md && git commit -m "[skip ci] Generated CHANGELOG file"
       git tag -f $TAG_VERSION
       sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc
-      export RELEASE_NOTES=$(gitchangelog $TAG_VERSION..HEAD)
+      export RELEASE_NOTES="\"$(gitchangelog $TAG_VERSION..HEAD)\""
     fi
   fi
 deploy:
@@ -72,7 +72,7 @@ deploy:
   file_glob: true
   file: dist/*
   skip_cleanup: true
-  body: "\"${RELEASE_NOTES}\""
+  body: ${RELEASE_NOTES}
   on:
     branch: master
     condition: $FLAG = true
