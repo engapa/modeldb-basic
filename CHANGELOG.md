@@ -1,20 +1,22 @@
 # Changelog
 
 
-## [v0.1.28 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.28)
+## [v0.1.29 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.29)
 
 ### Added
 
-* [8cb2766](https://github.com/engapa/modeldb-basic/commit/8cb2766b5d4b81a1a1916f655b35a3cbd7f34c77) Adding codecov configuration.
+* [8780218](https://github.com/engapa/modeldb-basic/commit/87802189d036e2cab0a1ebf43f3296ae18ef2098) Adding after_success task in travis to export coverage.
 
 
-## [v0.1.27 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.27)
+## [v0.1.28 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.28)
 
 ### Fix
 
 * [539dbc8](https://github.com/engapa/modeldb-basic/commit/539dbc87ff18a7880f5e35bf7b69729d4a0225af) Fix typo in template of releasenotes.
 
 ### Added
+
+* [8cb2766](https://github.com/engapa/modeldb-basic/commit/8cb2766b5d4b81a1a1916f655b35a3cbd7f34c77) Adding codecov configuration.
 
 * [158b017](https://github.com/engapa/modeldb-basic/commit/158b017cf60dfc448bee1765c47634bf80b4a7b3) Last attemp using release deploy stage of travis.
 
@@ -29,9 +31,5 @@
 * [ed0a74c](https://github.com/engapa/modeldb-basic/commit/ed0a74c858f50b315b9fa37bdfd37b0fdef1ea9e) Debugging travis, pufffffff.
 
 * [9260d37](https://github.com/engapa/modeldb-basic/commit/9260d37761d3dcbed0e85efc82bb1dd0a3f48cb1) Debugging travis, pufffffff.
-
-* [f1ad53f](https://github.com/engapa/modeldb-basic/commit/f1ad53f96d799a5cb4aaf6457ffd009f9b299d71) Debugging Travis jobs.
-
-* [656c22c](https://github.com/engapa/modeldb-basic/commit/656c22c7309efdff5da8dd2bbf5cea858e5cd027) Add a fix pattern for a section in changelog file.
 
 
