@@ -50,7 +50,8 @@ script:
       git add CHANGELOG.md && git commit -m "[skip ci] Generated CHANGELOG file"
       git tag -f $TAG_VERSION
       sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc
-      export RELEASE_NOTES="\"$(gitchangelog $TAG_VERSION..HEAD)\""
+      gitchangelog $TAG_VERSION..HEAD > RELEASE_NOTES.md
+      export RELEASE_NOTES=$(python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))")
     fi
   fi
 deploy:
