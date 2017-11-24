@@ -44,6 +44,7 @@ script:
       git config --global user.email "builds@travis-ci.com"
       git config --global user.name "Travis CI"
       git pull -t
+      export TAG_VERSION_OLD=$(git describe --tags `git rev-list --tags --max-count=1`)
       git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH
       bumpversion --tag --commit --message "[skip ci] Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
       export TAG_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`)
