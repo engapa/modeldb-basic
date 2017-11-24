@@ -46,13 +46,14 @@ script:
       git checkout -b travis-master-$TRAVIS_BUILD_NUMBER origin/$TRAVIS_BRANCH
       bumpversion --tag --commit --message "[skip ci] Travis Build ${TRAVIS_BUILD_NUMBER}. Update version {current_version} --> {new_version}" patch modeldb/__init__.py
       export TAG_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`)
-      gitchangelog > CHANGELOG.md
-      git add CHANGELOG.md
-      git commit -m "[skip ci] Generated CHANGELOG file" CHANGELOG.md
+      (gitchangelog > CHANGELOG.md) &
+      wait %1
+      git commit -am "[skip ci] Generated CHANGELOG file" CHANGELOG.md
       git tag -f $TAG_VERSION
       sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc
-      gitchangelog $TAG_VERSION..HEAD > RELEASE_NOTES.md
-      python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))"
+      (gitchangelog $TAG_VERSION..HEAD > RELEASE_NOTES.md) &
+      wait %1
+      python -c "import json,sys; print(json.dumps(open('RELEASE_NOTES.md').read()))"
       export RELEASE_NOTES=$(python -c "import json; print(json.dumps(open('RELEASE_NOTES.md').read()))")
       echo $RELEASE_NOTES
     fi
