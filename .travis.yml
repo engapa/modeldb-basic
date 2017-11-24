@@ -37,6 +37,7 @@ script:
 - make test
 - |
   if [[ "$FLAG" == "true" ]]; then
+    set -e
     make build clean
     if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master" ]]; then
       pip install -U bumpversion gitchangelog pystache
@@ -48,7 +49,7 @@ script:
       export TAG_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`)
       (gitchangelog > CHANGELOG.md) &
       wait %1
-      git commit -am "[skip ci] Generated CHANGELOG file" CHANGELOG.md
+      git add CHANGELOG.md && git commit -m "[skip ci] Generated CHANGELOG file" CHANGELOG.md
       git tag -f $TAG_VERSION
       sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc
       (gitchangelog $TAG_VERSION..HEAD > RELEASE_NOTES.md) &
