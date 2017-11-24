@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [v0.1.28 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.28)
+
+### Added
+
+* [8cb2766](https://github.com/engapa/modeldb-basic/commit/8cb2766b5d4b81a1a1916f655b35a3cbd7f34c77) Adding codecov configuration.
+
+
 ## [v0.1.27 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.27)
 
 ### Fix
