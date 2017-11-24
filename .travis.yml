@@ -54,7 +54,6 @@ script:
       sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc
       export ENV_RELEASE_NOTES=`gitchangelog $TAG_VERSION_OLD..HEAD`
       export RELEASE_NOTES=$(python -c "import json,os; print(json.dumps(os.environ['ENV_RELEASE_NOTES']))")
-      echo $RELEASE_NOTES
     fi
   fi
 deploy:
@@ -76,7 +75,7 @@ deploy:
   file_glob: true
   file: dist/*
   skip_cleanup: true
-  body: "${ENV_RELEASE_NOTES}"
+  body: "${RELEASE_NOTES}"
   on:
     branch: master
     condition: $FLAG = true
