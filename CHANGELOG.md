@@ -1,22 +1,14 @@
-# Release notes
+# Changelog
 
-Welcome to modeldb basci client. Take a look to complete changelog [here](CHANGELOG.md)
 
-## Usage
+## [v0.1.24 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.24)
 
-Documentation is available [here](README.rst).
+### Added
 
-## [v0.1.20 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.20)
+* [09d4798](https://github.com/engapa/modeldb-basic/commit/09d4798c635b98a232388a0df7755e66ff37204e) Testing release by using travis, wait write file operation.
 
-### Fix
 
-* [30a5964](https://github.com/engapa/modeldb-basic/commit/30a59645d353b8989078fd4885911e9b4039fcd3) Solve invalid env variable name in travis file.
-
-* [fc9ba0b](https://github.com/engapa/modeldb-basic/commit/fc9ba0b9bedf03cc44ce659ea0c5b29f7b877e19) Solve a extra ')' character in travis file.
-
-* [2c0fe2d](https://github.com/engapa/modeldb-basic/commit/2c0fe2d956091ab82757571b81453753d467ede9) Fix travis errata.
-
-* [0e46b37](https://github.com/engapa/modeldb-basic/commit/0e46b37b7e51cdc44b7e26c6d5f594887fdd2a92) Fix travis errata.
+## [v0.1.23 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.23)
 
 ### Added
 
@@ -37,13 +29,5 @@ Documentation is available [here](README.rst).
 * [02ee010](https://github.com/engapa/modeldb-basic/commit/02ee0109611d0c11187c7f556a0a833f7bf201fc) Debugging Travis jobs.
 
 * [5a4903e](https://github.com/engapa/modeldb-basic/commit/5a4903e60145187034b276d2a967d52d49cdc709) Adjust release notes content.
-
-* [c37de9c](https://github.com/engapa/modeldb-basic/commit/c37de9ce826020e6d7435c9ec1dde2a51304f684) TRying to use jshon to generate the release body.
-
-* [1c9f7c0](https://github.com/engapa/modeldb-basic/commit/1c9f7c0493e4d7324297835c602854e2ec85d37c) @ci Generated CHANGELOG file.
-
-* [b8e1ecb](https://github.com/engapa/modeldb-basic/commit/b8e1ecbbac8930f17a140977d7738b93ec7a5a40) @ci Generated CHANGELOG file.
-
-* [d370ec9](https://github.com/engapa/modeldb-basic/commit/d370ec9942084e115416ac5c95f2ca71b4ec641c) Generate RELEASE NOTES.
 
 
