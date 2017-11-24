@@ -18,10 +18,6 @@ Documentation is available [here](README.rst).
 
 * [0e46b37](https://github.com/engapa/modeldb-basic/commit/0e46b37b7e51cdc44b7e26c6d5f594887fdd2a92) Fix travis errata.
 
-* [fa2e85c](https://github.com/engapa/modeldb-basic/commit/fa2e85caf8aa61a42ae0dffa29607f5ad1789f52) Fix travis errata.
-
-* [1a7f820](https://github.com/engapa/modeldb-basic/commit/1a7f82019b9f33800346d89e9dc9fd7f5ddf9595) Fix travis errata.
-
 ### Added
 
 * [c0a914f](https://github.com/engapa/modeldb-basic/commit/c0a914ff7ddc0461fe2244a9fcb1c2cd8c53b13a) Export multiple needed env vars from script stage of travis.
@@ -47,8 +43,6 @@ Documentation is available [here](README.rst).
 * [1c9f7c0](https://github.com/engapa/modeldb-basic/commit/1c9f7c0493e4d7324297835c602854e2ec85d37c) @ci Generated CHANGELOG file.
 
 * [b8e1ecb](https://github.com/engapa/modeldb-basic/commit/b8e1ecbbac8930f17a140977d7738b93ec7a5a40) @ci Generated CHANGELOG file.
-
-* [3fb2064](https://github.com/engapa/modeldb-basic/commit/3fb2064881bdb535f0e49679851f742dff07e6f8) @ci Generated CHANGELOG file.
 
 * [d370ec9](https://github.com/engapa/modeldb-basic/commit/d370ec9942084e115416ac5c95f2ca71b4ec641c) Generate RELEASE NOTES.
 
