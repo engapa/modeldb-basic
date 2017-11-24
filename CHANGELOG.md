@@ -1,6 +1,17 @@
 # Changelog
 
 
+## [v0.1.30 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.30)
+
+### Added
+
+* [a8c2034](https://github.com/engapa/modeldb-basic/commit/a8c2034e88afa8e4d56dcf5a9d87011db4754838) Update version and activating rest of python venv versions.
+
+* [0aa5071](https://github.com/engapa/modeldb-basic/commit/0aa5071919bd484792f1c540bdd33afacf8c8786) Reset version to 0.0.1.
+
+* [158d545](https://github.com/engapa/modeldb-basic/commit/158d5455f26b0e8deb65996df7eb9044ab27b263) Removing first and last quotes in release notes.
+
+
 ## [v0.1.29 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.29)
 
 ### Added
