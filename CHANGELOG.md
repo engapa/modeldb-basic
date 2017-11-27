@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [v0.1.31 (2017-11-27)](https://github.com/engapa/modeldb-basic/tree/v0.1.31)
+
+### Added
+
+* [2d737b9](https://github.com/engapa/modeldb-basic/commit/2d737b943df2fc33e7a8c104b2ca0d81543151b1) Specify the file of coverage to inform to codecov.
+
+
 ## [v0.1.30 (2017-11-24)](https://github.com/engapa/modeldb-basic/tree/v0.1.30)
 
 ### Added
@@ -40,7 +47,5 @@
 * [c7bc1c3](https://github.com/engapa/modeldb-basic/commit/c7bc1c39d6baa43fb468976f7985bb105b2d704f) Debugging travis, pufffffff.
 
 * [ed0a74c](https://github.com/engapa/modeldb-basic/commit/ed0a74c858f50b315b9fa37bdfd37b0fdef1ea9e) Debugging travis, pufffffff.
-
-* [9260d37](https://github.com/engapa/modeldb-basic/commit/9260d37761d3dcbed0e85efc82bb1dd0a3f48cb1) Debugging travis, pufffffff.
 
 
