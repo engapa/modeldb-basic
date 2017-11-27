@@ -77,11 +77,11 @@ deploy:
   skip_cleanup: true
   script: >-
     curl -X POST
-      -H "Authorization: token $GITHUB_TOKEN"
+      -H "authToken: $GITHUB_TOKEN"
       -H "Content-Type: application/json"
       -d '{"name": "$TAG_VERSION",
            "tag_name": "$TAG_VERSION",
-           "target_commitish": "$TRAVIS_BRANCH"
+           "target_commitish": "$TRAVIS_BRANCH",
            "body": "$RELEASE_NOTES"}'
        https://api.github.com/repos/engapa/modeldb-basic/releases
   on:
