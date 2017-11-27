@@ -8,14 +8,14 @@ branches:
     - /^untagged.*/
 matrix:
   include:
-#  - python: "2.7"
-#    env:
-#    - FLAG=false
-#      TOXENV=py27
-#  - python: "3.5"
-#    env:
-#    - FLAG=false
-#      TOXENV=py35
+  - python: "2.7"
+    env:
+    - FLAG=false
+      TOXENV=py27
+  - python: "3.5"
+    env:
+    - FLAG=false
+      TOXENV=py35
   - python: "3.6"
     env:
     - FLAG=true
@@ -73,13 +73,17 @@ deploy:
     branch: master
     condition: $FLAG = true
 # Publish on github releases
-- provider: releases
-  overwrite: true
-  api_key: $GITHUB_TOKEN
-  file_glob: true
-  file: dist/*
+- provider: script
   skip_cleanup: true
-  body: ${RELEASE_NOTES}
+  script: >-
+    curl -X POST
+      -H "Authorization: token $GITHUB_TOKEN"
+      -H "Content-Type: application/json"
+      -d '{"name": "$TAG_VERSION",
+           "tag_name": "$TAG_VERSION",
+           "target_commitish": "$TRAVIS_BRANCH"
+           "body": "$RELEASE_NOTES"}'
+       https://api.github.com/repos/engapa/modeldb-basic/releases
   on:
     branch: master
     condition: $FLAG = true
