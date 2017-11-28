@@ -6,6 +6,9 @@ branches:
     - /^v\d+\.*$/
     - /^tavis-.*$/
     - /^untagged.*/
+env:
+  - GITHUB_OWNER=engapa
+  - GITHUB_REPO=modeldb-basic
 matrix:
   include:
   - python: "2.7"
@@ -29,6 +32,7 @@ addons:
     - python-pip
     - python-dev
     - build-essential
+    - jq
 services:
 - docker
 install:
@@ -53,7 +57,8 @@ script:
       git tag -f $TAG_VERSION
       sed -i.bak 's/changelog\.tpl/releasenotes\.tpl/g' .gitchangelog.rc
       export ENV_RELEASE_NOTES=`gitchangelog $TAG_VERSION_OLD..HEAD`
-      export RELEASE_NOTES=$(python -c "import json,os; print(json.dumps(os.environ['ENV_RELEASE_NOTES']).strip('\"'))")
+      export RELEASE_BODY=$(python -c "import json,os; print(json.dumps(os.environ['ENV_RELEASE_NOTES']).strip('\"'))")
+      export RELEASE_TAG=$TAG_VERSION
     fi
   fi
 after_success:
@@ -68,22 +73,14 @@ deploy:
     make clean build upload &&
     git checkout master &&
     git merge travis-master-$TRAVIS_BUILD_NUMBER &&
-    git push --tags https://$GITHUB_TOKEN@github.com/engapa/modeldb-basic.git $TRAVIS_BRANCH
+    git push --tags https://$GITHUB_TOKEN@github.com/$GITHUB_OWNER/$GITHUB_REPO.git $TRAVIS_BRANCH
   on:
     branch: master
     condition: $FLAG = true
 # Publish on github releases
 - provider: script
   skip_cleanup: true
-  script: >-
-    curl -X POST
-      -H "authToken: $GITHUB_TOKEN"
-      -H "Content-Type: application/json"
-      -d '{"name": "$TAG_VERSION",
-           "tag_name": "$TAG_VERSION",
-           "target_commitish": "$TRAVIS_BRANCH",
-           "body": "$RELEASE_NOTES"}'
-       https://api.github.com/repos/engapa/modeldb-basic/releases
+  script: ./bin/gh-release.sh
   on:
     branch: master
     condition: $FLAG = true
