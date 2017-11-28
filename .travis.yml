@@ -60,6 +60,7 @@ script:
       export ENV_RELEASE_NOTES=`gitchangelog $TAG_VERSION_OLD..HEAD`
       export RELEASE_BODY=$(python -c "import json,os; print(json.dumps(os.environ['ENV_RELEASE_NOTES']).strip('\"'))")
       export RELEASE_TAG=$TAG_VERSION
+      export RELEASE_DIR=$(pwd)/dist
     fi
   fi
 after_success:
