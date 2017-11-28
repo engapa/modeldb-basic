@@ -10,20 +10,20 @@ env:
   global:
   - GITHUB_OWNER=engapa
   - GITHUB_REPO=modeldb-basic
-  matrix:
-    include:
-    - python: "2.7"
-      env:
-      - FLAG=false
-        TOXENV=py27
-    - python: "3.5"
-      env:
-      - FLAG=false
-        TOXENV=py35
-    - python: "3.6"
-      env:
-      - FLAG=true
-        TOXENV=py36
+matrix:
+  include:
+  - python: "2.7"
+    env:
+    - FLAG=false
+      TOXENV=py27
+  - python: "3.5"
+    env:
+    - FLAG=false
+      TOXENV=py35
+  - python: "3.6"
+    env:
+    - FLAG=true
+      TOXENV=py36
 addons:
   apt:
     packages:
