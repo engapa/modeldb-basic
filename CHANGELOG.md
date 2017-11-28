@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [v0.1.34 (2017-11-28)](https://github.com/engapa/modeldb-basic/tree/v0.1.34)
+
+### Added
+
+* [0a77df4](https://github.com/engapa/modeldb-basic/commit/0a77df448f6ba2b846a7e4f44e950a4da0b843a9) Export release directory to upload suitable files.
+
+
 ## [v0.1.33 (2017-11-28)](https://github.com/engapa/modeldb-basic/tree/v0.1.33)
 
 ### Added
@@ -35,7 +42,5 @@
 * [158b017](https://github.com/engapa/modeldb-basic/commit/158b017cf60dfc448bee1765c47634bf80b4a7b3) Last attemp using release deploy stage of travis.
 
 * [09d4798](https://github.com/engapa/modeldb-basic/commit/09d4798c635b98a232388a0df7755e66ff37204e) Testing release by using travis, wait write file operation.
-
-* [adde4a7](https://github.com/engapa/modeldb-basic/commit/adde4a784ec13edb86556ae08dce2b48a9deabda) Merge branch 'master' of https://github.com/engapa/modeldb_basic.
 
 
