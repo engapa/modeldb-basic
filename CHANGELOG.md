@@ -46,6 +46,4 @@
 
 * [c7bc1c3](https://github.com/engapa/modeldb-basic/commit/c7bc1c39d6baa43fb468976f7985bb105b2d704f) Debugging travis, pufffffff.
 
-* [ed0a74c](https://github.com/engapa/modeldb-basic/commit/ed0a74c858f50b315b9fa37bdfd37b0fdef1ea9e) Debugging travis, pufffffff.
-
 
