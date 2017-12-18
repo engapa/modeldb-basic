@@ -12,7 +12,7 @@ help:
 	@echo "  test          to launch all tests in local host"
 
 clean:
-	@rm -rf *.egg .cache .doc .coverage build dist docs/build *.out *.output .tox *.thrift
+	@rm -rf *.egg .cache .doc .coverage build dist docs/build *.out *.output .tox .venv *.thrift
 	@find . -name '*.pyc' -exec rm -f {} +
 	@find . -name '*.pyo' -exec rm -f {} +
 	@find . -name '__pycache__' -exec rm -rf {} +

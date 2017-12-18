@@ -42,7 +42,6 @@ script:
 - make test
 - |
   if [[ "$FLAG" == "true" ]]; then
-    set -e
     make build
     if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master" ]]; then
       pip install -U bumpversion gitchangelog pystache
