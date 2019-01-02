@@ -19,7 +19,7 @@ This project goal is to try isolate a basic client to operate within model datab
 
 - Sync projects/models from file (json, yaml)
 - Sync projects/models by using basic mechanism (without sklearn dependencies)
-- Python 2.7 and 3.{5,6} compatibility.
+- Python 2.7 and 3.{5,6,7} compatibility.
 
 Quick start
 ===========
@@ -44,7 +44,7 @@ Alternatively it's possible to install it by using any of these URLs:
 * ``pip install <release_file>``
 
 Where [@<git_ref>] is an optional reference to a git reference (i.e: @master, @v0.1.6) and
-<release_file> is the URL of one release file at https://github.com/engapa/modeldb-basic/releases
+<release_file> is the URL of one released version at https://github.com/engapa/modeldb-basic/releases
 
 Locally
 """""""
