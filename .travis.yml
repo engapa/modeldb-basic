@@ -24,6 +24,10 @@ matrix:
     env:
     - FLAG=true
       TOXENV=py36
+  - python: "3.7"
+    env:
+      - FLAG=true
+        TOXENV=py37
 addons:
   apt:
     packages:
