@@ -1,4 +1,8 @@
-pytest
-pytest-pep8
-pytest-cov
-coverage
+pytest==4.0.2
+pytest-pep8==1.0.6
+pytest-cov==2.6.0
+coverage==4.5.2
+bumpversion==0.5.3
+gitchangelog==3.0.4
+pystache==0.5.4
+twine==1.12.1

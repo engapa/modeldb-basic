@@ -1,6 +1,6 @@
 .*
 !.gitignore
-!.travis.yml
+!.circleci
 !.gitchangelog.rc
 !.changelog.tpl
 !.releasenotes.tpl
