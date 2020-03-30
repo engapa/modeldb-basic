@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fengapa%2Fmodeldb-basic.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fengapa%2Fmodeldb-basic?ref=badge_shield)
+
 =============
 modeldb-basic
 =============
@@ -57,3 +59,7 @@ or::
 
  python setup.py install
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fengapa%2Fmodeldb-basic.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fengapa%2Fmodeldb-basic?ref=badge_large)
